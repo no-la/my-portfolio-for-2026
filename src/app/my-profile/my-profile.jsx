@@ -2,9 +2,9 @@ import './my-profile.css';
 
 const MyProfile = () => {
   return (
-    <div className="profile-wrapper">
+    <section className="profile-wrapper">
       <div>profile</div>
-    </div>
+    </section>
   );
 };
 
