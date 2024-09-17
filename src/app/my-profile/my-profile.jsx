@@ -4,7 +4,7 @@ import './my-profile.css';
 const MyProfile = () => {
   return (
     <section className="profile-wrapper">
-      <SectionHeader>Profile</SectionHeader>
+      <div>Profile</div>
     </section>
   );
 };
