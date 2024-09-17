@@ -33,6 +33,7 @@ export default [
       'no-empty-pattern': 'off',
       'no-unused-vars': 'off',
       'func-style': 'error',
+      'react/prop-types': 'off',
       semi: 'error',
       quotes: ['warn', 'single'],
       // ---------
