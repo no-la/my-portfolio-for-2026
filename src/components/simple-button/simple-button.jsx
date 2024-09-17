@@ -1,3 +1,5 @@
+import './simple-button.css';
+
 const SimpleButton = ({ children, className, onClick }) => {
   return (
     <button
