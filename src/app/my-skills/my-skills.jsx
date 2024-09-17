@@ -4,7 +4,7 @@ import './my-skills.css';
 const MySkills = () => {
   return (
     <section id="skills">
-      <SectionHeader>profile</SectionHeader>
+      <SectionHeader>Skills</SectionHeader>
     </section>
   );
 };

@@ -8,6 +8,13 @@ const Header = styled.header`
   display: flex;
   justify-content: space-between;
   height: ${height};
+
+  /* stick at top */
+  position: sticky;
+  top: 0;
+  left: 0;
+  background-color: inherit;
+  z-index: 100;
 `;
 const Nav = styled.nav`
   display: flex;
@@ -20,7 +27,7 @@ const Sumbnail = styled.div`
 
 const MyHeader = () => {
   return (
-    <Header id="top">
+    <Header id="top" className="my-header">
       <Sumbnail className="sumbnail">
         nola&apos;s portfolio
       </Sumbnail>
