@@ -6,6 +6,7 @@ import MyProfile from './my-profile/my-profile';
 import MySkills from './my-skills/my-skills';
 import MyProjects from './my-projects/my-projects';
 import MyOthers from './my-others/my-others';
+import MyFooter from './my-footer/my-footer';
 
 const App = () => {
   return (
@@ -15,6 +16,7 @@ const App = () => {
       <MySkills />
       <MyProjects />
       <MyOthers />
+      <MyFooter />
     </>
   );
 };
