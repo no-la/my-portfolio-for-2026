@@ -4,6 +4,7 @@ import { useState } from 'react';
 import MyHeader from './my-header/my-header';
 import MyProfile from './my-profile/my-profile';
 import MySkills from './my-skills/my-skills';
+import MyProjects from './my-projects/my-projects';
 
 const App = () => {
   return (
@@ -11,6 +12,7 @@ const App = () => {
       <MyHeader />
       <MyProfile />
       <MySkills />
+      <MyProjects />
     </>
   );
 };
