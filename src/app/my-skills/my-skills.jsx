@@ -12,9 +12,7 @@ const MySkills = () => {
   return (
     <section id="skills">
       <SectionHeader>Skills</SectionHeader>
-      <div css={contentWrapStyle}>
-        <DummyContent />
-      </div>
+      <DummyContent num={4} />
     </section>
   );
 };
