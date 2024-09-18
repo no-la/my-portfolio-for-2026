@@ -1,9 +1,13 @@
+/** @jsxImportSource @emotion/react */
+
 import SectionHeader from '../../components/section-header/section-header';
-import './my-projects.css';
 
 const MyProjects = () => {
   return (
-    <section id="projects">
+    <section
+      id="projects"
+      css={(theme) => ({ height: '600px' })}
+    >
       <SectionHeader>Projects</SectionHeader>
     </section>
   );

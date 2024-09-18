@@ -1,6 +1,5 @@
 /** @jsxImportSource @emotion/react */
 import SimpleButton from '../../components/simple-button/simple-button';
-import './my-header.css';
 import styled from '@emotion/styled';
 
 const height = '50px';

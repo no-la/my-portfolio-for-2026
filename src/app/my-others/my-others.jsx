@@ -1,9 +1,12 @@
+/** @jsxImportSource @emotion/react */
 import SectionHeader from '../../components/section-header/section-header';
-import './my-others.css';
 
 const MyOthers = () => {
   return (
-    <section id="others">
+    <section
+      id="others"
+      css={(theme) => ({ height: '600px' })}
+    >
       <SectionHeader>Others</SectionHeader>
     </section>
   );

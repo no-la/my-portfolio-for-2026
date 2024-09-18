@@ -1,9 +1,17 @@
-import SectionHeader from '../../components/section-header/section-header';
+/** @jsxImportSource @emotion/react */
+
 import './my-profile.css';
 
 const MyProfile = () => {
   return (
-    <section className="profile-wrapper">
+    <section
+      id="profile"
+      css={(theme) => ({
+        position: 'relative',
+        height: '600px',
+        backgroundColor: theme.colors.secondary,
+      })}
+    >
       <div>Profile</div>
     </section>
   );
