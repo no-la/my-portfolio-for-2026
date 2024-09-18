@@ -2,9 +2,8 @@
 
 import { css } from '@emotion/react';
 import SectionHeader from '../../components/section-header/section-header';
-import DummyContent from '../../components/dummy-content/dummy-content';
+import SkillCard from './skill-card';
 
-const cardWidth = 400;
 const wrapStyle = css`
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -17,6 +16,12 @@ const cellStyle = css`
 `;
 const itemStyle = css``;
 
+const datas = [
+  ['Python', '5年'],
+  ['C#', '1年'],
+  ['JavaScript', '6か月'],
+];
+
 const MySkills = () => {
   return (
     <section id="skills">
@@ -24,12 +29,7 @@ const MySkills = () => {
       <div css={wrapStyle}>
         {[...Array(4)].map((_, i) => (
           <div key={i} css={cellStyle}>
-            <DummyContent
-              num={4}
-              width={cardWidth}
-              height={500}
-              style={itemStyle}
-            />
+            <SkillCard></SkillCard>
           </div>
         ))}
       </div>
