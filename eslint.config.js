@@ -34,6 +34,10 @@ export default [
       'no-unused-vars': 'off',
       'func-style': 'error',
       'react/prop-types': 'off',
+      'react/no-unknown-property': [
+        'error',
+        { ignore: ['css'] },
+      ],
       semi: 'error',
       quotes: ['warn', 'single'],
       // ---------
