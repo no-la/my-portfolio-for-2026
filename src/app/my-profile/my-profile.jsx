@@ -1,7 +1,5 @@
 /** @jsxImportSource @emotion/react */
 
-import './my-profile.css';
-
 const MyProfile = () => {
   return (
     <section
