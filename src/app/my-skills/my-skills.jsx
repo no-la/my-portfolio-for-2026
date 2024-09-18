@@ -15,12 +15,23 @@ const cellStyle = css`
   justify-content: center;
   align-items: center;
 `;
-const itemStyle = css``;
 
 const datas = [
-  ['Python', '5年'],
-  ['C#', '1年'],
-  ['JavaScript', '6か月'],
+  {
+    icon: 'Py',
+    name: 'Python',
+    duration: '5年',
+  },
+  {
+    icon: 'JS',
+    name: 'JavaScript',
+    duration: '6ヶ月',
+  },
+  {
+    icon: 'C#',
+    name: 'C#',
+    duration: '1年',
+  },
 ];
 
 const MySkills = () => {
