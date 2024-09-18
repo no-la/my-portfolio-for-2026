@@ -1,0 +1,98 @@
+{
+  "Languages / Frameworks": [
+    {
+      "name": "Python",
+      "duration": "5年"
+    },
+    {
+      "name": "JavaScript",
+      "duration": "6ヶ月"
+    },
+    {
+      "name": "C#",
+      "duration": "1年"
+    },
+    {
+      "name": "HTML",
+      "duration": "6ヶ月"
+    },
+    {
+      "name": "CSS",
+      "duration": "6ヶ月"
+    },
+    {
+      "name": "Java",
+      "duration": "6ヶ月"
+    },
+    {
+      "name": "React",
+      "duration": "1ヶ月"
+    },
+    {
+      "name": "Django",
+      "duration": "1週間"
+    },
+    {
+      "name": "Go",
+      "duration": "1日"
+    }
+  ],
+  "Tools for Development": [
+    {
+      "name": "Visual Studio Code",
+      "duration": "4年"
+    },
+    {
+      "name": "Unity",
+      "duration": "1年"
+    },
+    {
+      "name": "Git",
+      "duration": "1年"
+    },
+    {
+      "name": "ESlint",
+      "duration": "1ヶ月未満"
+    },
+    {
+      "name": "Prettier",
+      "duration": "1ヶ月未満"
+    },
+    {
+      "name": "Pylint",
+      "duration": "1ヶ月未満"
+    },
+    {
+      "name": "Black",
+      "duration": "1ヶ月未満"
+    }
+  ],
+  "Tools for Design": [
+    {
+      "name": "Clip Studio Paint",
+      "duration": "6年"
+    },
+    {
+      "name": "Illustrator",
+      "duration": "1ヶ月"
+    },
+    {
+      "name": "After Effects",
+      "duration": "1ヶ月"
+    },
+    {
+      "name": "Figma",
+      "duration": "1ヶ月未満"
+    },
+    {
+      "name": "Photoshop",
+      "duration": "1ヶ月未満"
+    }
+  ],
+  "Others": [
+    {
+      "name": "Cubase",
+      "duration": "3ヶ月"
+    }
+  ]
+}

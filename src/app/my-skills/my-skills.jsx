@@ -4,6 +4,8 @@ import { css } from '@emotion/react';
 import SectionHeader from '../../components/section-header/section-header';
 import SkillCard from './skill-card';
 
+import datas from '../../assets/data/my-skills.json';
+
 const wrapStyle = css`
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -16,34 +18,16 @@ const cellStyle = css`
   align-items: center;
 `;
 
-const datas = [
-  {
-    icon: 'Py',
-    name: 'Python',
-    duration: '5年',
-  },
-  {
-    icon: 'JS',
-    name: 'JavaScript',
-    duration: '6ヶ月',
-  },
-  {
-    icon: 'C#',
-    name: 'C#',
-    duration: '1年',
-  },
-];
-
 const MySkills = () => {
   return (
     <section id="skills">
       <SectionHeader>Skills</SectionHeader>
       <div css={wrapStyle}>
-        {[...Array(4)].map((_, i) => (
-          <div key={i} css={cellStyle}>
+        {Object.keys(datas).map((key, i) => (
+          <div key={`${key}-${i}`} css={cellStyle}>
             <SkillCard
-              header="Languages / Frameworks"
-              datas={datas}
+              header={key}
+              datas={datas[key]}
             ></SkillCard>
           </div>
         ))}

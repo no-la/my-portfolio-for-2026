@@ -7,10 +7,9 @@ const divStyle = css`
   line-height: 40px;
 `;
 
-const SkillItem = ({ icon, name, duration }) => {
+const SkillItem = ({ name, duration }) => {
   return (
     <>
-      <div css={divStyle}>{icon}</div>
       <div css={divStyle}>{name}</div>
       <div css={divStyle}>{duration}</div>
     </>

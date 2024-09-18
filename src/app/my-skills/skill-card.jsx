@@ -5,7 +5,7 @@ import SkillItem from './skill-item';
 
 const cardStyle = (theme) => css`
   width: 400px;
-  height: 500px;
+  height: auto;
   background-color: ${theme.colors.secondary};
   padding: 20px;
   display: flex;
@@ -14,7 +14,7 @@ const cardStyle = (theme) => css`
 `;
 const ulStyle = (theme) => css`
   display: grid;
-  grid-template-columns: 50px 1fr 100px;
+  grid-template-columns: 1fr 100px;
 `;
 
 const SkillCard = ({ header, datas }) => {
