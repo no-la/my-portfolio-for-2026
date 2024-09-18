@@ -7,19 +7,20 @@ const cardStyle = (theme) => css`
   height: 500px;
   background-color: ${theme.colors.secondary};
   padding: 20px;
+  display: flex;
+  row-gap: 30px;
+  flex-direction: column;
 `;
 
-const SkillCard = () => {
+const SkillCard = ({ header, datas }) => {
   return (
     <div css={cardStyle}>
-      <h3>Languages / Frameworks</h3>
+      <h3>{header}</h3>
       <div>
         <ul>
-          <li>dummy</li>
-          <li>dummy</li>
-          <li>dummy</li>
-          <li>dummy</li>
-          <li>dummy</li>
+          {datas.map((data, i) => (
+            <li key={i}>{data.join('')}</li>
+          ))}
         </ul>
       </div>
     </div>

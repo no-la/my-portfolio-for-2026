@@ -30,7 +30,10 @@ const MySkills = () => {
       <div css={wrapStyle}>
         {[...Array(4)].map((_, i) => (
           <div key={i} css={cellStyle}>
-            <SkillCard></SkillCard>
+            <SkillCard
+              header="Languages / Frameworks"
+              datas={datas}
+            ></SkillCard>
           </div>
         ))}
       </div>
