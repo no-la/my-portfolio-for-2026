@@ -8,6 +8,7 @@ const wrapStyle = css`
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 60px;
+  padding: 30px 100px;
 `;
 const cellStyle = css`
   display: flex;
