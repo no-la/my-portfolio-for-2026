@@ -7,12 +7,20 @@ const wrapStyle = (theme) => css`
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 400px;
 `;
 
 const ProjectCard = ({}) => {
   return (
     <div css={wrapStyle}>
-      <img src="" alt="my project thumbnail" />
+      <img
+        src="src\assets\sample\images\3921310_s.jpg"
+        alt="my project thumbnail"
+        css={(theme) => ({
+          width: '350px',
+          objectFit: 'cover',
+        })}
+      />
       <CardHeader>project name</CardHeader>
       <div>
         <div>
