@@ -42,6 +42,9 @@ const ProjectCard = ({
       <ProjectDetailModal
         isOpen={isModalOpen}
         onClose={() => setIsModalOpen(false)}
+        name={name}
+        tags={tags}
+        {...detail}
       />
     </div>
   );
