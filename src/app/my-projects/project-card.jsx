@@ -11,32 +11,26 @@ const wrapStyle = (theme) => css`
   width: 400px;
 `;
 
-const ProjectCard = () => {
+const ProjectCard = ({
+  name,
+  tags,
+  summary: { thumbnail, text },
+  detail,
+}) => {
   return (
     <div css={wrapStyle}>
       <img
-        src="src\assets\sample\images\3921310_s.jpg"
-        alt="my project thumbnail"
+        src={thumbnail}
+        alt={`thumbnail-${name}`}
         css={(theme) => ({
           width: '350px',
           objectFit: 'cover',
         })}
       />
-      <CardHeader>project name</CardHeader>
+      <CardHeader>{name}</CardHeader>
       <div>
-        <div>
-          株式会社f4samuraiのサマーインターンで制作したゲーム。
-        </div>
-        <TagList
-          tags={[
-            'JavaScript',
-            'HTML',
-            'CSS',
-            'React',
-            'VSCode',
-            'Git',
-          ]}
-        />
+        <div>{text}</div>
+        <TagList tags={tags} />
       </div>
     </div>
   );

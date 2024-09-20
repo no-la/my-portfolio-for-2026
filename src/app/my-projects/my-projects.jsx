@@ -3,6 +3,7 @@
 import { css } from '@emotion/react';
 import SectionHeader from '../../components/section-header/section-header';
 import ProjectCard from './project-card';
+import datas from '../../assets/data/my-projects.json';
 
 const wrapStyle = css`
   display: flex;
@@ -13,22 +14,17 @@ const wrapStyle = css`
   gap: 30px;
 `;
 
-const datas = {
-  a: '1',
-  b: '2',
-  c: '3',
-  d: '4',
-  e: '5',
-  f: '6',
-};
-
+console.log(datas);
 const MyProjects = () => {
   return (
     <section id="projects">
       <SectionHeader>Projects</SectionHeader>
       <div css={wrapStyle}>
         {Object.keys(datas).map((key, i) => (
-          <ProjectCard key={`project-${key}`} />
+          <ProjectCard
+            key={`project-${key}`}
+            {...datas[key]}
+          />
         ))}
       </div>
     </section>

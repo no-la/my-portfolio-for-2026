@@ -1,0 +1,11 @@
+{
+  "0": {
+    "name": "タクティカル・タクティクス",
+    "tags": [0, 1, 2, 3, 4],
+    "summary": {
+      "thumbnail": "src/assets/sample/images/3921310_s.jpg",
+      "text": "株式会社f4samuraiのサマーインターンで制作したゲーム。"
+    },
+    "detail": {}
+  }
+}
