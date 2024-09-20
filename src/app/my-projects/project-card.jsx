@@ -4,6 +4,7 @@ import { css } from '@emotion/react';
 import CardHeader from '../../components/card-header/card-header';
 import TagList from '../../components/tag-list/tag-list';
 import ProjectDetailModal from './project-detail-modal';
+import { useState } from 'react';
 
 const wrapStyle = (theme) => css`
   display: flex;
@@ -18,8 +19,13 @@ const ProjectCard = ({
   summary: { thumbnail, text },
   detail,
 }) => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
   return (
-    <div css={wrapStyle}>
+    <div
+      css={wrapStyle}
+      onClick={() => setIsModalOpen(true)}
+    >
       <img
         src={thumbnail}
         alt={`thumbnail-${name}`}
@@ -33,7 +39,10 @@ const ProjectCard = ({
         <div>{text}</div>
         <TagList tags={tags} />
       </div>
-      <ProjectDetailModal></ProjectDetailModal>
+      <ProjectDetailModal
+        isOpen={isModalOpen}
+        onClose={() => setIsModalOpen(false)}
+      />
     </div>
   );
 };

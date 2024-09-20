@@ -2,10 +2,20 @@
 
 import Modal from '../../components/modal/modal';
 
-const ProjectDetailModal = ({}) => {
+const ProjectDetailModal = ({
+  isOpen,
+  onClose,
+  name,
+  tags,
+  text,
+  duration,
+  headcount,
+}) => {
   return (
     <div>
-      <Modal>もーだる！！</Modal>
+      <Modal isActive={isOpen} onClose={onClose}>
+        もーだる！！
+      </Modal>
     </div>
   );
 };

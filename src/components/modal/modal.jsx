@@ -1,35 +1,34 @@
 /** @jsxImportSource @emotion/react */
 
-const Modal = ({
-  isOpen,
-  onOpen,
-  onClose,
-  style,
-  children,
-}) => {
+const Modal = ({ onClose, isActive, style, children }) => {
   return (
     <div
       css={{
+        display: isActive ? 'flex' : 'none',
         position: 'fixed',
         top: 0,
         left: 0,
         bottom: 0,
         right: 0,
         backgroundColor: 'rgb(0 0 0/0.3)',
-        display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
+      }}
+      onClick={(e) => {
+        e.stopPropagation();
+        onClose();
       }}
     >
       <div
         css={[
           (theme) => ({
             backgroundColor: theme.colors.background,
-            minWidth: '400px',
-            minHeight: '400px',
           }),
           style,
         ]}
+        onClick={(e) => {
+          e.stopPropagation();
+        }}
       >
         {children}
       </div>
