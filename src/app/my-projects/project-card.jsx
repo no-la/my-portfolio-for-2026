@@ -2,6 +2,7 @@
 
 import { css } from '@emotion/react';
 import CardHeader from '../../components/card-header/card-header';
+import TagList from '../../components/tag-list/tag-list';
 
 const wrapStyle = (theme) => css`
   display: flex;
@@ -10,7 +11,7 @@ const wrapStyle = (theme) => css`
   width: 400px;
 `;
 
-const ProjectCard = ({}) => {
+const ProjectCard = () => {
   return (
     <div css={wrapStyle}>
       <img
@@ -26,14 +27,16 @@ const ProjectCard = ({}) => {
         <div>
           株式会社f4samuraiのサマーインターンで制作したゲーム。
         </div>
-        <div>
-          <div>JavaScript</div>
-          <div>HTML</div>
-          <div>CSS</div>
-          <div>React</div>
-          <div>VSCode</div>
-          <div>Git</div>
-        </div>
+        <TagList
+          tags={[
+            'JavaScript',
+            'HTML',
+            'CSS',
+            'React',
+            'VSCode',
+            'Git',
+          ]}
+        />
       </div>
     </div>
   );
