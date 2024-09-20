@@ -2,7 +2,7 @@
 
 const Tag = ({ tagName }) => {
   return (
-    <span
+    <li
       css={(theme) => ({
         backgroundColor: theme.colors.primary,
         borderRadius: '10px',
@@ -11,7 +11,7 @@ const Tag = ({ tagName }) => {
       })}
     >
       {tagName}
-    </span>
+    </li>
   );
 };
 
