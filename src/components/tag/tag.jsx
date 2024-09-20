@@ -1,16 +1,19 @@
 /** @jsxImportSource @emotion/react */
 
-const Tag = ({ tagName }) => {
+import datas from '../../assets/data/tags.json';
+
+const Tag = ({ tagId }) => {
   return (
     <li
       css={(theme) => ({
-        backgroundColor: theme.colors.primary,
+        backgroundColor:
+          datas[tagId].color || theme.colors.primary,
         borderRadius: '10px',
         padding: '1px 4px',
         fontSize: theme.fontSizes.small,
       })}
     >
-      {tagName}
+      {datas[tagId].name}
     </li>
   );
 };

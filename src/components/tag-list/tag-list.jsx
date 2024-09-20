@@ -15,7 +15,7 @@ const TagList = ({ tags }) => {
   return (
     <ul css={listStyle}>
       {tags.map((t, i) => (
-        <Tag tagName={t} key={`tag-${t}`} />
+        <Tag tagId={t} key={`tag-${t}`} />
       ))}
     </ul>
   );
