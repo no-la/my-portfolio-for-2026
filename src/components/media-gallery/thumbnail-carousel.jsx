@@ -14,6 +14,8 @@ const carouselStyle = css`
   width: 100%;
   overflow-x: scroll;
   overflow-y: hidden;
+  justify-content: center;
+  gap: 4px;
 
   ::-webkit-scrollbar {
     display: none;
