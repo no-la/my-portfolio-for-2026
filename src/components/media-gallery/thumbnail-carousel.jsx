@@ -53,6 +53,7 @@ const ThumbnailCarousel = ({
                 i === selectedIndex
                   ? theme.colors.secondary
                   : 'gray',
+              position: 'relative',
             })}
           >
             {item.type == 'image' ? (
@@ -62,11 +63,24 @@ const ThumbnailCarousel = ({
                 alt={`thumbnail-media-${i}`}
               ></img>
             ) : (
-              <img
-                css={thumbnailMediaStyle}
-                src={item.thumbnailSrc}
-                alt={`thumbnail-media-${i}`}
-              ></img>
+              <>
+                <img
+                  css={thumbnailMediaStyle}
+                  src={item.thumbnailSrc}
+                  alt={`thumbnail-media-${i}`}
+                />
+                <img
+                  css={css`
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    width: 90%;
+                    object-fit: contain;
+                  `}
+                  src="public\images\play-button.png"
+                />
+              </>
             )}
           </li>
         ))}

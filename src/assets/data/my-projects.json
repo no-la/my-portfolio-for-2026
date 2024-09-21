@@ -20,34 +20,24 @@
       "links": ["dummy-url"],
       "images": [
         {
-          "type": "image",
-          "mainSrc": "src/assets/sample/images/3921310_s.jpg",
-          "thumbnailSrc": "src/assets/sample/images/3921310_s.jpg"
+          "type": "video",
+          "mainSrc": "public/videos/tf0-main.mp4",
+          "thumbnailSrc": "public/images/tf1-main.jpg"
         },
         {
           "type": "image",
-          "mainSrc": "src/assets/sample/images/2365406_s.jpg",
-          "thumbnailSrc": "src/assets/sample/images/2365406_s.jpg"
+          "mainSrc": "public/images/tf1-main.jpg",
+          "thumbnailSrc": "public/images/tf1-main.jpg"
         },
         {
           "type": "image",
-          "mainSrc": "src/assets/sample/images/2054051_s.jpg",
-          "thumbnailSrc": "src/assets/sample/images/2054051_s.jpg"
+          "mainSrc": "public/images/tf2-main.jpg",
+          "thumbnailSrc": "public/images/tf2-main.jpg"
         },
         {
           "type": "image",
-          "mainSrc": "src/assets/sample/images/3921310_s.jpg",
-          "thumbnailSrc": "src/assets/sample/images/3921310_s.jpg"
-        },
-        {
-          "type": "image",
-          "mainSrc": "src/assets/sample/images/2365406_s.jpg",
-          "thumbnailSrc": "src/assets/sample/images/2365406_s.jpg"
-        },
-        {
-          "type": "image",
-          "mainSrc": "src/assets/sample/images/2054051_s.jpg",
-          "thumbnailSrc": "src/assets/sample/images/2054051_s.jpg"
+          "mainSrc": "public/images/tf3-main.jpg",
+          "thumbnailSrc": "public/images/tf3-main.jpg"
         }
       ]
     }

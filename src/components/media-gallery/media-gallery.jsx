@@ -34,6 +34,7 @@ const MediaGallery = ({ items, style }) => {
           <video
             src={items[currentIndex].mainSrc}
             css={mainMediaStyle}
+            controls
           ></video>
         )}
       </div>
