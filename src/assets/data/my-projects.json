@@ -18,7 +18,38 @@
       "until": "2024/9/5",
       "headcount": 7,
       "links": ["dummy-url"],
-      "images": ["src/assets/sample/images/3921310_s.jpg"]
+      "images": [
+        {
+          "type": "image",
+          "mainSrc": "src/assets/sample/images/3921310_s.jpg",
+          "thumbnailSrc": "src/assets/sample/images/3921310_s.jpg"
+        },
+        {
+          "type": "image",
+          "mainSrc": "src/assets/sample/images/2365406_s.jpg",
+          "thumbnailSrc": "src/assets/sample/images/2365406_s.jpg"
+        },
+        {
+          "type": "image",
+          "mainSrc": "src/assets/sample/images/2054051_s.jpg",
+          "thumbnailSrc": "src/assets/sample/images/2054051_s.jpg"
+        },
+        {
+          "type": "image",
+          "mainSrc": "src/assets/sample/images/3921310_s.jpg",
+          "thumbnailSrc": "src/assets/sample/images/3921310_s.jpg"
+        },
+        {
+          "type": "image",
+          "mainSrc": "src/assets/sample/images/2365406_s.jpg",
+          "thumbnailSrc": "src/assets/sample/images/2365406_s.jpg"
+        },
+        {
+          "type": "image",
+          "mainSrc": "src/assets/sample/images/2054051_s.jpg",
+          "thumbnailSrc": "src/assets/sample/images/2054051_s.jpg"
+        }
+      ]
     }
   }
 }

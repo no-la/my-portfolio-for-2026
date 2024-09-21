@@ -4,6 +4,7 @@ import { css } from '@emotion/react';
 import Modal from '../../components/modal/modal';
 import SectionHeader from '../../components/section-header/section-header';
 import TagList from '../../components/tag-list/tag-list';
+import MediaGallery from '../../components/media-gallery/media-gallery';
 
 const contentWrapStyle = css`
   display: grid;
@@ -41,7 +42,6 @@ const ProjectDetailModal = ({
   links,
   images,
 }) => {
-  console.log(links);
   return (
     <div>
       <Modal
@@ -61,13 +61,13 @@ const ProjectDetailModal = ({
             </div>
             <div css={detailInformationWrapStyle}>
               <span>開発期間</span>
-              <span>：</span>
+              <span>:</span>
               <span>{`${duration} ( ${since}～${until} )`}</span>
               <span>開発人数</span>
-              <span>：</span>
+              <span>:</span>
               <span>{headcount} 人</span>
               <span>使用技術</span>
-              <span>：</span>
+              <span>:</span>
               <TagList tags={tags} />
             </div>
             <div>
@@ -79,14 +79,7 @@ const ProjectDetailModal = ({
             </div>
           </div>
           <div css={imageWrapStyle}>
-            <img
-              src={images[0]}
-              alt=""
-              css={css`
-                object-fit: cover;
-                width: 450px;
-              `}
-            />
+            <MediaGallery items={images} />
           </div>
         </div>
       </Modal>
