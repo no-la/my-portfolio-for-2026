@@ -76,19 +76,19 @@
     "color": ""
   },
   "202": {
-    "name": "After Effects",
-    "color": ""
-  },
-  "203": {
     "name": "Figma",
-    "color": ""
-  },
-  "204": {
-    "name": "Premire Pro",
     "color": ""
   },
   "300": {
     "name": "Cubase",
+    "color": ""
+  },
+  "301": {
+    "name": "After Effects",
+    "color": ""
+  },
+  "302": {
+    "name": "Premire Pro",
     "color": ""
   }
 }
