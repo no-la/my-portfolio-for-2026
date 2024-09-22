@@ -2,29 +2,7 @@
 import { css } from '@emotion/react';
 import SectionHeader from '../../components/section-header/section-header';
 import OtherCard from './other-card';
-
-const datas = [
-  {
-    name: 'AtCoder',
-    tags: [0, 100],
-    text: '友人に誘われて、2023/9頃に始め、現在も趣味として続けている。現在は緑コーダーで、水色コーダーを目標にしている。',
-  },
-  {
-    name: 'AtCoder',
-    tags: [0, 100],
-    text: '友人に誘われて、2023/9頃に始め、現在も趣味として続けている。現在は緑コーダーで、水色コーダーを目標にしている。',
-  },
-  {
-    name: 'AtCoder',
-    tags: [0, 100],
-    text: '友人に誘われて、2023/9頃に始め、現在も趣味として続けている。現在は緑コーダーで、水色コーダーを目標にしている。',
-  },
-  {
-    name: 'AtCoder',
-    tags: [0, 100],
-    text: '友人に誘われて、2023/9頃に始め、現在も趣味として続けている。現在は緑コーダーで、水色コーダーを目標にしている。',
-  },
-];
+import datas from '../../assets/data/my-others.json';
 
 const WrapStyle = css`
   display: flex;
@@ -40,11 +18,8 @@ const MyOthers = () => {
     <section id="others">
       <SectionHeader>Others</SectionHeader>
       <div css={WrapStyle}>
-        {datas.map((data, i) => (
-          <OtherCard
-            key={`other-card-${data.name}`}
-            {...data}
-          ></OtherCard>
+        {Object.keys(datas).map((key, i) => (
+          <OtherCard key={key} {...datas[key]}></OtherCard>
         ))}
       </div>
     </section>

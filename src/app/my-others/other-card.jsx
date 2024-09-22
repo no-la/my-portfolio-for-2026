@@ -16,7 +16,11 @@ const OtherCard = ({ name, tags, text }) => {
     <div css={wrapStyle}>
       <CardHeader>{name}</CardHeader>
       <TagList tags={tags}></TagList>
-      <div>{text}</div>
+      <div>
+        {text.map((t, i) => (
+          <p key={i}>{t}</p>
+        ))}
+      </div>
     </div>
   );
 };
