@@ -3,7 +3,6 @@
 import { css } from '@emotion/react';
 
 const DummyContent = ({
-  num = 1,
   children = 'Dummy',
   width = 400,
   height = 400,
