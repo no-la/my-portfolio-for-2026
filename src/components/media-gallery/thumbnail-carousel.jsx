@@ -80,7 +80,7 @@ const ThumbnailCarousel = ({
                     width: 90%;
                     object-fit: contain;
                   `}
-                  src="public\images\play-button.png"
+                  src="images\play-button.png"
                 />
               </>
             )}

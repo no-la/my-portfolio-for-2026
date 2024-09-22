@@ -21,23 +21,23 @@
       "images": [
         {
           "type": "video",
-          "mainSrc": "public/videos/tf0-main.mp4",
-          "thumbnailSrc": "public/images/tf1-main.jpg"
+          "mainSrc": "videos/tf0-main.mp4",
+          "thumbnailSrc": "images/tf1-main.jpg"
         },
         {
           "type": "image",
-          "mainSrc": "public/images/tf1-main.jpg",
-          "thumbnailSrc": "public/images/tf1-main.jpg"
+          "mainSrc": "images/tf1-main.jpg",
+          "thumbnailSrc": "images/tf1-main.jpg"
         },
         {
           "type": "image",
-          "mainSrc": "public/images/tf2-main.jpg",
-          "thumbnailSrc": "public/images/tf2-main.jpg"
+          "mainSrc": "images/tf2-main.jpg",
+          "thumbnailSrc": "images/tf2-main.jpg"
         },
         {
           "type": "image",
-          "mainSrc": "public/images/tf3-main.jpg",
-          "thumbnailSrc": "public/images/tf3-main.jpg"
+          "mainSrc": "images/tf3-main.jpg",
+          "thumbnailSrc": "images/tf3-main.jpg"
         }
       ]
     }
@@ -46,7 +46,7 @@
     "name": "画像ファイル管理アプリ",
     "tags": [0, 3, 4, 5, 100],
     "summary": {
-      "thumbnail": "public/images/im-thumbnail.jpg",
+      "thumbnail": "images/im-thumbnail.jpg",
       "text": "タグ付けによって画像ファイルを管理するGUIアプリ。"
     },
     "detail": {
@@ -65,23 +65,23 @@
       "images": [
         {
           "type": "video",
-          "mainSrc": "public/videos/tf0-main.mp4",
-          "thumbnailSrc": "public/images/tf1-main.jpg"
+          "mainSrc": "videos/tf0-main.mp4",
+          "thumbnailSrc": "images/tf1-main.jpg"
         },
         {
           "type": "image",
-          "mainSrc": "public/images/tf1-main.jpg",
-          "thumbnailSrc": "public/images/tf1-main.jpg"
+          "mainSrc": "images/tf1-main.jpg",
+          "thumbnailSrc": "images/tf1-main.jpg"
         },
         {
           "type": "image",
-          "mainSrc": "public/images/tf2-main.jpg",
-          "thumbnailSrc": "public/images/tf2-main.jpg"
+          "mainSrc": "images/tf2-main.jpg",
+          "thumbnailSrc": "images/tf2-main.jpg"
         },
         {
           "type": "image",
-          "mainSrc": "public/images/tf3-main.jpg",
-          "thumbnailSrc": "public/images/tf3-main.jpg"
+          "mainSrc": "images/tf3-main.jpg",
+          "thumbnailSrc": "images/tf3-main.jpg"
         }
       ]
     }
@@ -108,23 +108,23 @@
       "images": [
         {
           "type": "video",
-          "mainSrc": "public/videos/tf0-main.mp4",
-          "thumbnailSrc": "public/images/tf1-main.jpg"
+          "mainSrc": "videos/tf0-main.mp4",
+          "thumbnailSrc": "images/tf1-main.jpg"
         },
         {
           "type": "image",
-          "mainSrc": "public/images/tf1-main.jpg",
-          "thumbnailSrc": "public/images/tf1-main.jpg"
+          "mainSrc": "images/tf1-main.jpg",
+          "thumbnailSrc": "images/tf1-main.jpg"
         },
         {
           "type": "image",
-          "mainSrc": "public/images/tf2-main.jpg",
-          "thumbnailSrc": "public/images/tf2-main.jpg"
+          "mainSrc": "images/tf2-main.jpg",
+          "thumbnailSrc": "images/tf2-main.jpg"
         },
         {
           "type": "image",
-          "mainSrc": "public/images/tf3-main.jpg",
-          "thumbnailSrc": "public/images/tf3-main.jpg"
+          "mainSrc": "images/tf3-main.jpg",
+          "thumbnailSrc": "images/tf3-main.jpg"
         }
       ]
     }
@@ -153,23 +153,23 @@
       "images": [
         {
           "type": "video",
-          "mainSrc": "public/videos/tf0-main.mp4",
-          "thumbnailSrc": "public/images/tf1-main.jpg"
+          "mainSrc": "videos/tf0-main.mp4",
+          "thumbnailSrc": "images/tf1-main.jpg"
         },
         {
           "type": "image",
-          "mainSrc": "public/images/tf1-main.jpg",
-          "thumbnailSrc": "public/images/tf1-main.jpg"
+          "mainSrc": "images/tf1-main.jpg",
+          "thumbnailSrc": "images/tf1-main.jpg"
         },
         {
           "type": "image",
-          "mainSrc": "public/images/tf2-main.jpg",
-          "thumbnailSrc": "public/images/tf2-main.jpg"
+          "mainSrc": "images/tf2-main.jpg",
+          "thumbnailSrc": "images/tf2-main.jpg"
         },
         {
           "type": "image",
-          "mainSrc": "public/images/tf3-main.jpg",
-          "thumbnailSrc": "public/images/tf3-main.jpg"
+          "mainSrc": "images/tf3-main.jpg",
+          "thumbnailSrc": "images/tf3-main.jpg"
         }
       ]
     }
@@ -194,23 +194,23 @@
       "images": [
         {
           "type": "video",
-          "mainSrc": "public/videos/tf0-main.mp4",
-          "thumbnailSrc": "public/images/tf1-main.jpg"
+          "mainSrc": "videos/tf0-main.mp4",
+          "thumbnailSrc": "images/tf1-main.jpg"
         },
         {
           "type": "image",
-          "mainSrc": "public/images/tf1-main.jpg",
-          "thumbnailSrc": "public/images/tf1-main.jpg"
+          "mainSrc": "images/tf1-main.jpg",
+          "thumbnailSrc": "images/tf1-main.jpg"
         },
         {
           "type": "image",
-          "mainSrc": "public/images/tf2-main.jpg",
-          "thumbnailSrc": "public/images/tf2-main.jpg"
+          "mainSrc": "images/tf2-main.jpg",
+          "thumbnailSrc": "images/tf2-main.jpg"
         },
         {
           "type": "image",
-          "mainSrc": "public/images/tf3-main.jpg",
-          "thumbnailSrc": "public/images/tf3-main.jpg"
+          "mainSrc": "images/tf3-main.jpg",
+          "thumbnailSrc": "images/tf3-main.jpg"
         }
       ]
     }
@@ -238,23 +238,23 @@
       "images": [
         {
           "type": "video",
-          "mainSrc": "public/videos/tf0-main.mp4",
-          "thumbnailSrc": "public/images/tf1-main.jpg"
+          "mainSrc": "videos/tf0-main.mp4",
+          "thumbnailSrc": "images/tf1-main.jpg"
         },
         {
           "type": "image",
-          "mainSrc": "public/images/tf1-main.jpg",
-          "thumbnailSrc": "public/images/tf1-main.jpg"
+          "mainSrc": "images/tf1-main.jpg",
+          "thumbnailSrc": "images/tf1-main.jpg"
         },
         {
           "type": "image",
-          "mainSrc": "public/images/tf2-main.jpg",
-          "thumbnailSrc": "public/images/tf2-main.jpg"
+          "mainSrc": "images/tf2-main.jpg",
+          "thumbnailSrc": "images/tf2-main.jpg"
         },
         {
           "type": "image",
-          "mainSrc": "public/images/tf3-main.jpg",
-          "thumbnailSrc": "public/images/tf3-main.jpg"
+          "mainSrc": "images/tf3-main.jpg",
+          "thumbnailSrc": "images/tf3-main.jpg"
         }
       ]
     }
@@ -283,23 +283,23 @@
       "images": [
         {
           "type": "video",
-          "mainSrc": "public/videos/tf0-main.mp4",
-          "thumbnailSrc": "public/images/tf1-main.jpg"
+          "mainSrc": "videos/tf0-main.mp4",
+          "thumbnailSrc": "images/tf1-main.jpg"
         },
         {
           "type": "image",
-          "mainSrc": "public/images/tf1-main.jpg",
-          "thumbnailSrc": "public/images/tf1-main.jpg"
+          "mainSrc": "images/tf1-main.jpg",
+          "thumbnailSrc": "images/tf1-main.jpg"
         },
         {
           "type": "image",
-          "mainSrc": "public/images/tf2-main.jpg",
-          "thumbnailSrc": "public/images/tf2-main.jpg"
+          "mainSrc": "images/tf2-main.jpg",
+          "thumbnailSrc": "images/tf2-main.jpg"
         },
         {
           "type": "image",
-          "mainSrc": "public/images/tf3-main.jpg",
-          "thumbnailSrc": "public/images/tf3-main.jpg"
+          "mainSrc": "images/tf3-main.jpg",
+          "thumbnailSrc": "images/tf3-main.jpg"
         }
       ]
     }
