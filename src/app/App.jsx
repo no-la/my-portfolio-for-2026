@@ -42,9 +42,9 @@ const globalStyles = (theme) => css`
     background-color: ${theme.colors.background};
   }
 
-  * {
-    border: 1px solid gray;
-  }
+  /* * { */
+  /* border: 1px solid gray; */
+  /* } */
 
   /* reset */
   * {
