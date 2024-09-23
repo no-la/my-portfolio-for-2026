@@ -26,10 +26,8 @@ const Sumbnail = styled.div`
 
 const MyHeader = () => {
   return (
-    <Header id="top" className="my-header">
-      <Sumbnail className="sumbnail">
-        nola&apos;s portfolio
-      </Sumbnail>
+    <Header id="top">
+      <Sumbnail>nola&apos;s portfolio</Sumbnail>
       <Nav>
         {['Top', 'Skills', 'Projects', 'Others'].map(
           (t) => {

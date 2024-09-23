@@ -1,9 +1,14 @@
-import './simple-button.css';
+/** @jsxImportSource @emotion/react */
+import { css } from '@emotion/react';
 
-const SimpleButton = ({ children, className, onClick }) => {
+const simpleButtonStyle = css`
+  background: none;
+`;
+
+const SimpleButton = ({ children, style, onClick }) => {
   return (
     <button
-      className={`simple-button ${className}`}
+      css={[simpleButtonStyle, style]}
       onClick={onClick}
     >
       {children}
