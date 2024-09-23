@@ -8,7 +8,7 @@ const wrapStyle = (theme) => css`
   height: 100%;
 `;
 const cardStyle = (theme) => css`
-  width: 400px;
+  width: 350px;
   height: auto;
   background-color: ${theme.colors.secondary};
   padding: 20px;
