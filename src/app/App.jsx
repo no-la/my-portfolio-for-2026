@@ -18,7 +18,8 @@ const theme = {
   colors: {
     primary: '#baece2',
     secondary: '#f2c5a5',
-    background: '#f5fff5',
+    tertiary: '#f2c5a5',
+    background: '#fafcfa',
     text: '#2a2a2a',
   },
   fontSizes: {
@@ -35,12 +36,10 @@ const globalStyles = (theme) => css`
     line-height: 1.5;
     font-weight: 400;
     font-size: ${theme.fontSizes.medium};
-
-    background-color: #fff;
   }
 
   #root {
-    background-color: rgb(237, 242, 243);
+    background-color: ${theme.colors.background};
   }
 
   * {
