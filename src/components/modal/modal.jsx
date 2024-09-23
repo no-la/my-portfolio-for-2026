@@ -13,6 +13,9 @@ const Modal = ({ onClose, isActive, style, children }) => {
         backgroundColor: 'rgb(0 0 0/0.3)',
         alignItems: 'center',
         justifyContent: 'center',
+        ':hover': {
+          cursor: 'pointer',
+        },
       }}
       onClick={(e) => {
         e.stopPropagation();
@@ -23,6 +26,7 @@ const Modal = ({ onClose, isActive, style, children }) => {
         css={[
           (theme) => ({
             backgroundColor: theme.colors.background,
+            cursor: 'default',
           }),
           style,
         ]}

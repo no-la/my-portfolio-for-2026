@@ -11,6 +11,10 @@ const wrapStyle = (theme) => css`
   flex-direction: column;
   align-items: center;
   width: 400px;
+
+  :hover {
+    cursor: pointer;
+  }
 `;
 
 const ProjectCard = ({
