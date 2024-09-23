@@ -11,7 +11,8 @@ const wrapStyle = css`
   width: 350px;
 `;
 
-const OtherCard = ({ name, tags, text }) => {
+const OtherCard = ({ name, tags, text, links }) => {
+  console.log(links);
   return (
     <div css={wrapStyle}>
       <CardHeader>{name}</CardHeader>
@@ -21,6 +22,13 @@ const OtherCard = ({ name, tags, text }) => {
           <p key={i}>{t}</p>
         ))}
       </div>
+      <ul>
+        {links.map((url, i) => (
+          <li key={i}>
+            <a href={url}>{url}</a>
+          </li>
+        ))}
+      </ul>
     </div>
   );
 };
