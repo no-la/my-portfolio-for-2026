@@ -14,7 +14,6 @@ const wrapStyle = css`
   gap: 30px;
 `;
 
-console.log(datas);
 const MyProjects = () => {
   return (
     <section id="projects">
