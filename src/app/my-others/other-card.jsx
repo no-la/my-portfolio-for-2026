@@ -12,7 +12,6 @@ const wrapStyle = css`
 `;
 
 const OtherCard = ({ name, tags, text, links }) => {
-  console.log(links);
   return (
     <div css={wrapStyle}>
       <CardHeader>{name}</CardHeader>
