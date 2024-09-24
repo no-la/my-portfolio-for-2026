@@ -30,12 +30,12 @@ const theme = {
 };
 
 const globalStyles = (theme) => css`
+  @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap');
   :root {
-    font-family: Inter, system-ui, Avenir, Helvetica, Arial,
-      sans-serif;
+    font-family: 'Noto Sans JP', sans-serif;
     line-height: 1.5;
     font-weight: 400;
-    font-size: ${theme.fontSizes.medium};
+    font-size: ${theme.fontSizes.normal};
   }
 
   #root {
