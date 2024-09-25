@@ -5,7 +5,6 @@ import { css } from '@emotion/react';
 const SectionHeader = ({ children }) => {
   return (
     <h1
-      className="section-header"
       css={(theme) => css`
         /* background-color: ${theme.colors.primary}; */
         padding: 10px 0px 5px 30px;
