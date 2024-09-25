@@ -2,14 +2,14 @@
 
 const CardHeader = ({ children }) => {
   return (
-    <h3
+    <h2
       css={(theme) => ({
         backgroundColor: theme.colors.secondary,
         textAlign: 'center',
       })}
     >
       {children}
-    </h3>
+    </h2>
   );
 };
 
