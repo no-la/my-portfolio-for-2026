@@ -38,13 +38,19 @@ const globalStyles = (theme) => css`
     font-size: ${theme.fontSizes.normal};
   }
 
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-feature-settings: 'palt';
+    letter-spacing: 0.05em;
+  }
+
   #root {
     background-color: ${theme.colors.background};
   }
-
-  /* * { */
-  /* border: 1px solid gray; */
-  /* } */
 
   /* reset */
   * {
