@@ -4,7 +4,7 @@ const CardHeader = ({ children }) => {
   return (
     <h2
       css={(theme) => ({
-        backgroundColor: theme.colors.secondary,
+        // backgroundColor: theme.colors.secondary,
         textAlign: 'center',
       })}
     >
