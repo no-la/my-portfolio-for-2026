@@ -2,7 +2,7 @@
 
 const SectionHeader = ({ children }) => {
   return (
-    <h2
+    <h1
       className="section-header"
       css={(theme) => ({
         backgroundColor: theme.colors.primary,
@@ -10,7 +10,7 @@ const SectionHeader = ({ children }) => {
       })}
     >
       {children}
-    </h2>
+    </h1>
   );
 };
 
