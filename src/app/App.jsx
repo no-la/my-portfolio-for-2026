@@ -48,6 +48,13 @@ const globalStyles = (theme) => css`
     letter-spacing: 0.05em;
   }
 
+  h1 {
+    font-size: 1.8em;
+  }
+  h2 {
+    font-size: 1.2em;
+  }
+
   #root {
     background-color: ${theme.colors.background};
   }
