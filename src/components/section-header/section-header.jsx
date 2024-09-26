@@ -7,6 +7,7 @@ const SectionHeader = ({ children }) => {
     <div
       css={css`
         display: flex;
+        margin-bottom: 40px;
       `}
     >
       <h1

@@ -11,7 +11,6 @@ const breakpoints = ['800px', '1600px'];
 const wrapStyle = css`
   display: grid;
   gap: 60px;
-  padding: 30px 100px;
   @media (max-width: ${breakpoints[0]}) {
     grid-template-columns: 1fr;
   }
@@ -33,7 +32,10 @@ const MySkills = () => {
     <section id="skills">
       <SectionHeader>Skills</SectionHeader>
       <div
-        css={{ display: 'flex', justifyContent: 'center' }}
+        css={(theme) => css`
+          display: flex;
+          justify-content: center;
+        `}
       >
         <div css={wrapStyle}>
           {Object.keys(datas).map((key, i) => (
