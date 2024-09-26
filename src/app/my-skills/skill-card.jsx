@@ -16,6 +16,7 @@ const cardStyle = (theme) => css`
 const ulStyle = (theme) => css`
   display: grid;
   grid-template-columns: 1fr 100px;
+  row-gap: 10px;
 `;
 
 const SkillCard = ({ header, datas }) => {
