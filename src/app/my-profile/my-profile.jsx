@@ -13,6 +13,9 @@ const wrapStyle = css`
   flex-wrap: wrap;
   gap: 20px 30px;
 `;
+const resetPStyle = css`
+  margin-bottom: 0;
+`;
 
 const MyProfile = () => {
   return (
@@ -33,7 +36,9 @@ const MyProfile = () => {
           <CardHeader>{datas.name}</CardHeader>
           <div>
             {datas.text.map((t, i) => (
-              <p key={i}>{t}</p>
+              <p key={i} css={resetPStyle}>
+                {t}
+              </p>
             ))}
           </div>
         </div>
