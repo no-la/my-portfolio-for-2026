@@ -1,17 +1,22 @@
 /** @jsxImportSource @emotion/react */
 import { css } from '@emotion/react';
-import CardHeader from '../card-header/card-header';
 
 const wrapStyle = (theme) => css`
   display: flex;
   height: 100%;
 `;
-const Card = ({ cardStyle, header, children }) => {
+const defaultCardStyle = (theme) => css`
+  width: 350px;
+  height: auto;
+  background-color: ${theme.colors.white};
+  padding: 20px;
+  border-radius: 10px;
+`;
+const Card = ({ cardStyle, children }) => {
   return (
     <div css={wrapStyle}>
-      <div css={cardStyle}>
-        <CardHeader>{header}</CardHeader>
-        <div>{children}</div>
+      <div css={[defaultCardStyle, cardStyle]}>
+        {children}
       </div>
     </div>
   );

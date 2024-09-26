@@ -3,12 +3,11 @@
 import { css } from '@emotion/react';
 import SkillItem from './skill-item';
 import Card from '../../components/card/card';
+import CardHeader from '../../components/card-header/card-header';
 
 const cardStyle = (theme) => css`
-  width: 350px;
   height: auto;
   background-color: ${theme.colors.white};
-  padding: 20px;
   display: flex;
   row-gap: 30px;
   flex-direction: column;
@@ -20,7 +19,8 @@ const ulStyle = (theme) => css`
 
 const SkillCard = ({ header, datas }) => {
   return (
-    <Card header={header} cardStyle={cardStyle}>
+    <Card cardStyle={cardStyle}>
+      <CardHeader>{header}</CardHeader>
       <div>
         <ul css={ulStyle}>
           {datas.map((data, i) => (
