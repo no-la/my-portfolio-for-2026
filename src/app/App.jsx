@@ -27,7 +27,7 @@ const colors1 = {
   tertiary: '#F3A922',
   background: '#E4F2F2',
   text: '#192626',
-  // h1: '#1a787a',
+  h1: '#1a787a',
 };
 const theme = {
   colors: {
@@ -43,12 +43,24 @@ const theme = {
 
 const globalStyles = (theme) => css`
   @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap');
+  /* reset */
+  * {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    border: none;
+  }
+
   :root {
     font-family: 'Noto Sans JP', sans-serif;
     line-height: 1.5;
     font-weight: 400;
     font-size: ${theme.fontSizes.normal};
     color: ${theme.colors.text};
+  }
+
+  #root {
+    background-color: ${theme.colors.background};
   }
 
   h1,
@@ -68,16 +80,8 @@ const globalStyles = (theme) => css`
   h2 {
     font-size: 1.2em;
   }
-
-  #root {
-    background-color: ${theme.colors.background};
-  }
-
-  /* reset */
-  * {
-    margin: 0;
-    padding: 0;
-    list-style: none;
+  button {
+    font-size: ${theme.fontSizes.normal};
   }
 `;
 
