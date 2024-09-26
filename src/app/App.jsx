@@ -26,7 +26,8 @@ const colors1 = {
   secondary: '#5CC2D9',
   tertiary: '#F3A922',
   background: '#E4F2F2',
-  text: '#192626',
+  black: '#192626',
+  white: '#ffffff',
   h1: '#1a787a',
 };
 const theme = {
@@ -56,7 +57,7 @@ const globalStyles = (theme) => css`
     line-height: 1.5;
     font-weight: 400;
     font-size: ${theme.fontSizes.normal};
-    color: ${theme.colors.text};
+    color: ${theme.colors.black};
   }
 
   #root {
