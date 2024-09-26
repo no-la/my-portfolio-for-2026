@@ -123,7 +123,7 @@
     "name": "だっかん！モンスターの島",
     "tags": [1, 101, 200, 201, 301, 302],
     "summary": {
-      "thumbnail": "src/assets/sample/images/3921310_s.jpg",
+      "thumbnail": "images/dm-thumbnail.jpg",
       "text": "2Dタワーディフェンスゲーム。2人のチーム開発で、素材から全て自作した。"
     },
     "detail": {
@@ -143,23 +143,38 @@
       "images": [
         {
           "type": "video",
-          "mainSrc": "videos/tf0-main.mp4",
-          "thumbnailSrc": "images/tf1-main.jpg"
+          "mainSrc": "videos/dm0-main.mp4",
+          "thumbnailSrc": "images/dm-thumbnail.jpg"
         },
         {
           "type": "image",
-          "mainSrc": "images/tf1-main.jpg",
-          "thumbnailSrc": "images/tf1-main.jpg"
+          "mainSrc": "images/dm1-main.jpg",
+          "thumbnailSrc": "images/dm1-main.jpg"
         },
         {
           "type": "image",
-          "mainSrc": "images/tf2-main.jpg",
-          "thumbnailSrc": "images/tf2-main.jpg"
+          "mainSrc": "images/dm2-main.jpg",
+          "thumbnailSrc": "images/dm2-main.jpg"
         },
         {
           "type": "image",
-          "mainSrc": "images/tf3-main.jpg",
-          "thumbnailSrc": "images/tf3-main.jpg"
+          "mainSrc": "images/dm3-main.jpg",
+          "thumbnailSrc": "images/dm3-main.jpg"
+        },
+        {
+          "type": "image",
+          "mainSrc": "images/dm4-main.jpg",
+          "thumbnailSrc": "images/dm4-main.jpg"
+        },
+        {
+          "type": "image",
+          "mainSrc": "images/dm5-main.jpg",
+          "thumbnailSrc": "images/dm5-main.jpg"
+        },
+        {
+          "type": "image",
+          "mainSrc": "images/dm6-main.jpg",
+          "thumbnailSrc": "images/dm6-main.jpg"
         }
       ]
     }
