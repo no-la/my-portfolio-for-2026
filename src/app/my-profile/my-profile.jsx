@@ -15,7 +15,7 @@ const wrapStyle = css`
 
 const MyProfile = () => {
   return (
-    <section>
+    <section id="profile">
       <SectionHeader>Profile</SectionHeader>
       <div css={wrapStyle}>
         <div>

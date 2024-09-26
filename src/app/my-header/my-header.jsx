@@ -23,26 +23,34 @@ const pageIconStyle = (theme) => css`
   background-color: ${theme.colors.primary};
   line-height: ${height};
 `;
+const navButtonStyle = (theme) => css`
+  /* reset */
+  text-decoration: none;
+  color: ${theme.colors.text};
+`;
 
 const MyHeader = () => {
   return (
-    <header css={headerStyle}>
+    <header css={headerStyle} id="top">
       <div css={pageIconStyle}>nola&apos;s portfolio</div>
       <nav css={navStyle}>
-        {['Top', 'Skills', 'Projects', 'Others'].map(
-          (t) => {
-            return (
-              <SimpleButton
-                key={`headre-${t}-button`}
-                onClick={() =>
-                  console.log(`${t} is clicked!`)
-                }
-              >
-                {t}
-              </SimpleButton>
-            );
-          },
-        )}
+        {[
+          'Top',
+          'Profile',
+          'Skills',
+          'Projects',
+          'Others',
+        ].map((t, i) => {
+          return (
+            <a
+              key={i}
+              href={`#${t.toLowerCase()}`}
+              css={navButtonStyle}
+            >
+              {t}
+            </a>
+          );
+        })}
       </nav>
     </header>
   );

@@ -83,6 +83,10 @@ const globalStyles = (theme) => css`
   button {
     font-size: ${theme.fontSizes.normal};
   }
+  button:hover {
+    background-color: ${theme.colors.primary};
+    cursor: pointer;
+  }
 `;
 
 const App = () => {
