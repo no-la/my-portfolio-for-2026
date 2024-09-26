@@ -11,6 +11,7 @@ const CardHeader = ({ cardHeaderStyle, children }) => {
             ${theme.colors.secondary};
           text-align: 'center';
           width: 100%;
+          padding-bottom: 2px;
           display: flex;
           justify-content: center;
           margin-bottom: 8px;

@@ -247,24 +247,9 @@
       "links": [],
       "images": [
         {
-          "type": "video",
-          "mainSrc": "videos/tf0-main.mp4",
-          "thumbnailSrc": "images/tf1-main.jpg"
-        },
-        {
           "type": "image",
-          "mainSrc": "images/tf1-main.jpg",
-          "thumbnailSrc": "images/tf1-main.jpg"
-        },
-        {
-          "type": "image",
-          "mainSrc": "images/tf2-main.jpg",
-          "thumbnailSrc": "images/tf2-main.jpg"
-        },
-        {
-          "type": "image",
-          "mainSrc": "images/tf3-main.jpg",
-          "thumbnailSrc": "images/tf3-main.jpg"
+          "mainSrc": "src/assets/sample/images/3921310_s.jpg",
+          "thumbnailSrc": "src/assets/sample/images/3921310_s.jpg"
         }
       ]
     }
@@ -292,24 +277,9 @@
       "links": ["https://no-la.github.io/utayomi/"],
       "images": [
         {
-          "type": "video",
-          "mainSrc": "videos/tf0-main.mp4",
-          "thumbnailSrc": "images/tf1-main.jpg"
-        },
-        {
           "type": "image",
-          "mainSrc": "images/tf1-main.jpg",
-          "thumbnailSrc": "images/tf1-main.jpg"
-        },
-        {
-          "type": "image",
-          "mainSrc": "images/tf2-main.jpg",
-          "thumbnailSrc": "images/tf2-main.jpg"
-        },
-        {
-          "type": "image",
-          "mainSrc": "images/tf3-main.jpg",
-          "thumbnailSrc": "images/tf3-main.jpg"
+          "mainSrc": "src/assets/sample/images/3921310_s.jpg",
+          "thumbnailSrc": "src/assets/sample/images/3921310_s.jpg"
         }
       ]
     }
