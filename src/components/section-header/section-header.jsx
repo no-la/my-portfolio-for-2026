@@ -6,9 +6,11 @@ const SectionHeader = ({ children }) => {
   return (
     <h1
       css={(theme) => css`
-        /* background-color: ${theme.colors.primary}; */
+        background-color: ${theme.colors.primary};
+        color: ${theme.colors.white};
         padding: 10px 0px 5px 30px;
-        border-bottom: 2px dashed #c9c9c9;
+        /* border-bottom: 4px solid ${theme.colors
+          .tertiary}; */
       `}
     >
       {children}

@@ -26,7 +26,15 @@ const pageIconStyle = (theme) => css`
 const navButtonStyle = (theme) => css`
   /* reset */
   text-decoration: none;
-  color: ${theme.colors.text};
+  line-height: ${height};
+  padding: 0 8px;
+  color: ${theme.colors.black};
+  :visited {
+    color: ${theme.colors.black};
+  }
+  :hover {
+    background-color: ${theme.colors.primary};
+  }
 `;
 
 const MyHeader = () => {
