@@ -43,7 +43,7 @@ const navButtonStyle = (theme) => css`
 
 const MyHeader = () => {
   return (
-    <header css={headerStyle} id="top">
+    <header css={headerStyle}>
       <div css={pageIconStyle}>nola&apos;s portfolio</div>
       <nav css={navStyle}>
         {[

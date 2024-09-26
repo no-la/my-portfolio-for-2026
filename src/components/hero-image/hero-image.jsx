@@ -15,9 +15,9 @@ const imgStyle = css`
   object-fit: contain;
 `;
 
-const HeroImage = ({ imgPath, children }) => {
+const HeroImage = ({ imgPath, children, id }) => {
   return (
-    <section css={wrapStyle}>
+    <section css={wrapStyle} id={id}>
       <img src={imgPath} alt="hero-image" css={imgStyle} />
       {children}
     </section>
