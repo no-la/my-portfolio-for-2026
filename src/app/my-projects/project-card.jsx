@@ -12,9 +12,18 @@ const cardStyle = (theme) => css`
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 360px;
   :hover {
     cursor: pointer;
   }
+`;
+const thumbnailImageStyle = (theme) => css`
+  width: 100%;
+  object-fit: cover;
+  margin-bottom: 12px;
+`;
+const summaryTextStyle = (theme) => css`
+  margin-bottom: 16px;
 `;
 
 const ProjectCard = ({
@@ -33,16 +42,11 @@ const ProjectCard = ({
       <img
         src={thumbnail}
         alt={`thumbnail-${name}`}
-        css={(theme) => ({
-          width: '350px',
-          objectFit: 'cover',
-        })}
+        css={(theme) => thumbnailImageStyle}
       />
       <CardHeader>{name}</CardHeader>
-      <div>
-        <div>{text}</div>
-        <TagList tags={tags} />
-      </div>
+      <div css={summaryTextStyle}>{text}</div>
+      <TagList tags={tags} />
       <ProjectDetailModal
         isOpen={isModalOpen}
         onClose={() => setIsModalOpen(false)}
