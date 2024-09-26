@@ -7,11 +7,12 @@ import TagList from '../../components/tag-list/tag-list';
 import MediaGallery from '../../components/media-gallery/media-gallery';
 import ModalHeader from '../../components/modal/modal-header';
 
+const gap = '40px';
 const contentWrapStyle = css`
   display: grid;
   grid-template-areas: 'text media';
-  padding: 30px;
-  gap: 40px;
+  padding: ${gap};
+  gap: ${gap};
   flex-wrap: wrap-reverse;
 
   @media (max-width: 1000px) {

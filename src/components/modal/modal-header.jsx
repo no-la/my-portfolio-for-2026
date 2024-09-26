@@ -3,9 +3,10 @@
 import { css } from '@emotion/react';
 
 const modalHeaderStyle = (theme) => css`
-  background-color: ${theme.colors.tertiary};
-  color: ${theme.colors.white};
-  padding: 4px 12px;
+  border-bottom: 4px dotted ${theme.colors.secondary};
+  padding: 8px;
+  margin: 0 24px;
+  text-align: center;
 `;
 
 const ModalHeader = ({ children }) => {

@@ -15,6 +15,14 @@ const Modal = ({ onClose, isActive, style, children }) => {
         background-color: ${`${theme.colors.black}78`};
         align-items: center;
         justify-content: center;
+
+        /* for not scroll background */
+        overscroll-behavior: none;
+        overflow-y: scroll;
+        ::-webkit-scrollbar {
+          display: none;
+        }
+
         :hover {
           cursor: pointer;
         }
@@ -42,6 +50,13 @@ const Modal = ({ onClose, isActive, style, children }) => {
       >
         {children}
       </div>
+      <div
+        css={css`
+          height: calc(100vh + 1px);
+          width: 1px;
+          background-color: transparent;
+        `}
+      ></div>
     </div>
   );
 };
