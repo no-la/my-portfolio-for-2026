@@ -12,9 +12,9 @@ const listStyle = css`
   min-height: 21px;
 `;
 
-const TagList = ({ tags }) => {
+const TagList = ({ tags, tagListStyle }) => {
   return (
-    <ul css={listStyle}>
+    <ul css={[listStyle, tagListStyle]}>
       {tags.map((t, i) => (
         <Tag tagId={t} key={`tag-${t}`} />
       ))}
