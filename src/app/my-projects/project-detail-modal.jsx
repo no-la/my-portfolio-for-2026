@@ -11,7 +11,7 @@ const contentWrapStyle = css`
   display: grid;
   grid-template-areas: 'text media';
   padding: 30px;
-  gap: 30px;
+  gap: 40px;
   flex-wrap: wrap-reverse;
 
   @media (max-width: 1000px) {
@@ -21,19 +21,19 @@ const contentWrapStyle = css`
   }
 `;
 const detailWrapStyle = css`
+  grid-area: text;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  gap: 20px;
+  /* justify-content: space-between; */
+  gap: 16px;
   max-width: 640px;
-  grid-area: text;
 `;
 const imageWrapStyle = css`
+  grid-area: media;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  grid-area: media;
 `;
 const detailInformationWrapStyle = css`
   display: grid;
@@ -59,6 +59,7 @@ const ProjectDetailModal = ({
         isActive={isOpen}
         onClose={onClose}
         style={css`
+          max-width: 90%;
           @media (max-width: 1000px) {
             position: absolute;
             top: 10%;
