@@ -5,6 +5,10 @@ import { css } from '@emotion/react';
 const wrapStyle = css`
   position: relative;
   height: 100vh;
+
+  /* reset */
+  margin: 0;
+  padding: 0;
 `;
 const imgStyle = css`
   position: absolute;

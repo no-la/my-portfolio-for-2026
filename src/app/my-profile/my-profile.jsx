@@ -3,6 +3,7 @@
 import { css } from '@emotion/react';
 import SectionHeader from '../../components/section-header/section-header';
 import CardHeader from '../../components/card-header/card-header';
+import datas from '../../assets/data/my-profile.json';
 
 const wrapStyle = css`
   display: flex;
@@ -26,17 +27,11 @@ const MyProfile = () => {
           />
         </div>
         <div>
-          <CardHeader>のーら</CardHeader>
+          <CardHeader>{datas.name}</CardHeader>
           <div>
-            <p>
-              あいうえおあいうえおあいうえおあいうえおあいうえおあいうえお
-            </p>
-            <p>
-              あいうえおあいうえおあいうえおあいうえおあいうえおあいうえお
-            </p>
-            <p>
-              あいうえおあいうえおあいうえおあいうえおあいうえおあいうえお
-            </p>
+            {datas.text.map((t, i) => (
+              <p key={i}>{t}</p>
+            ))}
           </div>
         </div>
       </div>
