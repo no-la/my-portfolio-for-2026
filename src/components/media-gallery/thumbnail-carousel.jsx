@@ -25,11 +25,13 @@ const nextPrevStyle = css`
   line-height: ${height};
   font-weight: bold;
   text-align: center;
+  cursor: pointer;
 `;
 const thumbnailMediaStyle = css`
   /* width: 100px; */
   height: 100%;
   object-fit: cover;
+  cursor: pointer;
 `;
 
 const ThumbnailCarousel = ({
@@ -79,6 +81,7 @@ const ThumbnailCarousel = ({
                     transform: translate(-50%, -50%);
                     width: 90%;
                     object-fit: contain;
+                    pointer-events: none;
                   `}
                   src="images\play-button.png"
                 />

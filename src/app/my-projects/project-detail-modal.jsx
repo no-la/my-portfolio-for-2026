@@ -9,7 +9,7 @@ import ModalHeader from '../../components/modal/modal-header';
 
 const contentWrapStyle = css`
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr auto;
   padding: 30px;
   column-gap: 30px;
 `;
@@ -18,6 +18,7 @@ const detailWrapStyle = css`
   flex-direction: column;
   justify-content: space-between;
   gap: 20px;
+  max-width: 640px;
 `;
 const imageWrapStyle = css`
   display: flex;
