@@ -7,8 +7,9 @@ import { useRef } from 'react';
 import { forwardRef } from 'react';
 import { useImperativeHandle } from 'react';
 
+const width = '520px';
 const wrapStyle = css`
-  /* width: 520px; */
+  width: ${width};
   /* height: 440px; */
 `;
 const mainViewStyle = css`
@@ -19,7 +20,7 @@ const mainViewStyle = css`
   margin-bottom: 20px;
 `;
 const mainMediaStyle = css`
-  width: 520px;
+  width: ${width};
   max-height: 440px;
   object-fit: contain;
 `;
