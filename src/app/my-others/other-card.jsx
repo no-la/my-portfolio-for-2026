@@ -10,7 +10,7 @@ const cardStyle = (theme) => css`
   flex-direction: column;
   background: transparent;
   align-items: center;
-  width: 400px;
+  width: 378px;
 `;
 const tagListStyle = css``;
 const resetPStyle = css`
