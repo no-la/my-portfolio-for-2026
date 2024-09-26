@@ -92,6 +92,9 @@ const globalStyles = (theme) => css`
     background-color: ${theme.colors.primary};
     cursor: pointer;
   }
+  section {
+    margin-bottom: 80px;
+  }
 `;
 
 const App = () => {

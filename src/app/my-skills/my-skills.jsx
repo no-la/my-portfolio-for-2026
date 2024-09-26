@@ -6,7 +6,7 @@ import SkillCard from './skill-card';
 
 import datas from '../../assets/data/my-skills.json';
 
-const breakpoints = ['900px', '1800px'];
+const breakpoints = ['800px', '1600px'];
 
 const wrapStyle = css`
   display: grid;

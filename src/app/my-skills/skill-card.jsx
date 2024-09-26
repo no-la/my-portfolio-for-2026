@@ -9,8 +9,9 @@ const cardStyle = (theme) => css`
   height: auto;
   background-color: ${theme.colors.white};
   display: flex;
-  row-gap: 30px;
+  row-gap: 16px;
   flex-direction: column;
+  width: 300px;
 `;
 const ulStyle = (theme) => css`
   display: grid;
