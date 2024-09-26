@@ -8,6 +8,7 @@ const SectionHeader = ({ children }) => {
       css={css`
         display: flex;
         margin-bottom: 40px;
+        margin-right: 8%;
       `}
     >
       <h1
@@ -24,9 +25,10 @@ const SectionHeader = ({ children }) => {
       </h1>
       <div
         css={(theme) => css`
-          background-color: ${theme.colors.tertiary};
-          width: 16px;
+          /* background-color: ${theme.colors.tertiary}; */
+          background-image: url('images/section-header-decoration.png');
           height: inherit;
+          width: 147px;
         `}
       ></div>
     </div>
