@@ -5,16 +5,17 @@ import { useState } from 'react';
 import ThumbnailCarousel from './thumbnail-carousel';
 
 const wrapStyle = css`
-  width: 400px;
+  min-width: 400px;
 `;
 const mainViewStyle = css`
-  width: 100%;
-  height: 400px;
+  display: flex;
+  justify-content: center;
+  /* max-height: 400px; */
   margin-bottom: 20px;
 `;
 const mainMediaStyle = css`
-  width: inherit;
-  height: inherit;
+  max-width: 600px;
+  max-height: 440px;
   object-fit: contain;
 `;
 
