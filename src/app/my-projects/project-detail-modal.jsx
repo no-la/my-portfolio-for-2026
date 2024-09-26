@@ -5,6 +5,7 @@ import Modal from '../../components/modal/modal';
 import SectionHeader from '../../components/section-header/section-header';
 import TagList from '../../components/tag-list/tag-list';
 import MediaGallery from '../../components/media-gallery/media-gallery';
+import ModalHeader from '../../components/modal/modal-header';
 
 const contentWrapStyle = css`
   display: grid;
@@ -51,7 +52,7 @@ const ProjectDetailModal = ({
           max-width: 70%;
         `}
       >
-        <SectionHeader>{name}</SectionHeader>
+        <ModalHeader>{name}</ModalHeader>
         <div css={contentWrapStyle}>
           <div css={detailWrapStyle}>
             <div>

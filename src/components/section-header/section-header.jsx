@@ -8,7 +8,7 @@ const SectionHeader = ({ children }) => {
       css={(theme) => css`
         background-color: ${theme.colors.primary};
         color: ${theme.colors.white};
-        padding: 10px 0px 5px 30px;
+        padding: 10px 0px 10px 30px;
         /* border-bottom: 4px solid ${theme.colors
           .tertiary}; */
       `}
