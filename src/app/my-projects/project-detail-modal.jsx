@@ -9,9 +9,16 @@ import ModalHeader from '../../components/modal/modal-header';
 
 const contentWrapStyle = css`
   display: grid;
-  grid-template-columns: 1fr auto;
+  grid-template-areas: 'text media';
   padding: 30px;
   column-gap: 30px;
+  flex-wrap: wrap-reverse;
+
+  @media (max-width: 1000px) {
+    grid-template-areas:
+      'media'
+      'text';
+  }
 `;
 const detailWrapStyle = css`
   display: flex;
@@ -19,12 +26,14 @@ const detailWrapStyle = css`
   justify-content: space-between;
   gap: 20px;
   max-width: 640px;
+  grid-area: text;
 `;
 const imageWrapStyle = css`
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  grid-area: media;
 `;
 const detailInformationWrapStyle = css`
   display: grid;
@@ -51,6 +60,10 @@ const ProjectDetailModal = ({
         onClose={onClose}
         style={css`
           max-width: 70%;
+          @media (max-width: 1000px) {
+            position: absolute;
+            top: 10%;
+          }
         `}
       >
         <ModalHeader>{name}</ModalHeader>

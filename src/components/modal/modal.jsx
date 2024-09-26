@@ -5,14 +5,14 @@ import { css } from '@emotion/react';
 const Modal = ({ onClose, isActive, style, children }) => {
   return (
     <div
-      css={css`
+      css={(theme) => css`
         display: ${isActive ? 'flex' : 'none'};
         position: fixed;
         top: 0;
         left: 0;
         bottom: 0;
         right: 0;
-        background-color: rgb(0 0 0/0.3);
+        background-color: ${`${theme.colors.black}78`};
         align-items: center;
         justify-content: center;
         :hover {
@@ -29,8 +29,10 @@ const Modal = ({ onClose, isActive, style, children }) => {
           (theme) => css`
             background-color: ${theme.colors.white};
             border-radius: 10px;
-            overflow: hidden;
+            overflow-x: hidden;
+            overflow-y: auto;
             cursor: default;
+            max-height: 85%;
           `,
           style,
         ]}
