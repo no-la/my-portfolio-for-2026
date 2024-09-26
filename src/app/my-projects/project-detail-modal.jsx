@@ -25,7 +25,7 @@ const detailWrapStyle = css`
   display: flex;
   flex-direction: column;
   /* justify-content: space-between; */
-  gap: 16px;
+  gap: 32px;
   max-width: 640px;
 `;
 const imageWrapStyle = css`
@@ -38,6 +38,8 @@ const imageWrapStyle = css`
 const detailInformationWrapStyle = css`
   display: grid;
   grid-template-columns: auto auto auto;
+  gap: 4px 8px;
+  text-align: center;
 `;
 
 const ProjectDetailModal = ({
