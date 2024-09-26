@@ -7,6 +7,9 @@ import ProjectDetailModal from './project-detail-modal';
 import { useState } from 'react';
 
 const wrapStyle = (theme) => css`
+  background-color: ${theme.colors.white};
+  border-radius: 10px;
+  padding: 30px;
   display: flex;
   flex-direction: column;
   align-items: center;

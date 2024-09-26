@@ -11,7 +11,7 @@ const wrapStyle = (theme) => css`
 const cardStyle = (theme) => css`
   width: 350px;
   height: auto;
-  background-color: ${theme.colors.secondary};
+  background-color: ${theme.colors.white};
   padding: 20px;
   display: flex;
   row-gap: 30px;
