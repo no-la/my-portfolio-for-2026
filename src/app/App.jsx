@@ -95,6 +95,9 @@ const globalStyles = (theme) => css`
   section {
     margin-bottom: 80px;
   }
+  p {
+    margin-bottom: ${theme.fontSizes.normal};
+  }
 `;
 
 const App = () => {

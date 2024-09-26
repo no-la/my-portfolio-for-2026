@@ -11,7 +11,7 @@ const contentWrapStyle = css`
   display: grid;
   grid-template-areas: 'text media';
   padding: 30px;
-  column-gap: 30px;
+  gap: 30px;
   flex-wrap: wrap-reverse;
 
   @media (max-width: 1000px) {
@@ -59,7 +59,6 @@ const ProjectDetailModal = ({
         isActive={isOpen}
         onClose={onClose}
         style={css`
-          max-width: 70%;
           @media (max-width: 1000px) {
             position: absolute;
             top: 10%;
