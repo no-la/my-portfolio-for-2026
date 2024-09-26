@@ -183,7 +183,7 @@
     "name": "まいんすいーぱー",
     "tags": [1, 101, 200, 201, 300],
     "summary": {
-      "thumbnail": "src/assets/sample/images/3921310_s.jpg",
+      "thumbnail": "images/ms-thumbnail.jpg",
       "text": "マインスイーパーの模写。ロゴ、SE、BGMなどを自作した。"
     },
     "detail": {
@@ -199,23 +199,28 @@
       "images": [
         {
           "type": "video",
-          "mainSrc": "videos/tf0-main.mp4",
-          "thumbnailSrc": "images/tf1-main.jpg"
+          "mainSrc": "videos/ms0-main.mp4",
+          "thumbnailSrc": "images/ms1-main.jpg"
         },
         {
           "type": "image",
-          "mainSrc": "images/tf1-main.jpg",
-          "thumbnailSrc": "images/tf1-main.jpg"
+          "mainSrc": "images/ms1-main.jpg",
+          "thumbnailSrc": "images/ms1-main.jpg"
         },
         {
           "type": "image",
-          "mainSrc": "images/tf2-main.jpg",
-          "thumbnailSrc": "images/tf2-main.jpg"
+          "mainSrc": "images/ms2-main.jpg",
+          "thumbnailSrc": "images/ms2-main.jpg"
         },
         {
           "type": "image",
-          "mainSrc": "images/tf3-main.jpg",
-          "thumbnailSrc": "images/tf3-main.jpg"
+          "mainSrc": "images/ms3-main.jpg",
+          "thumbnailSrc": "images/ms3-main.jpg"
+        },
+        {
+          "type": "image",
+          "mainSrc": "images/ms4-main.jpg",
+          "thumbnailSrc": "images/ms4-main.jpg"
         }
       ]
     }
