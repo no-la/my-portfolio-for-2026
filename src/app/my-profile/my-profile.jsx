@@ -23,7 +23,10 @@ const MyProfile = () => {
           <img
             src="src/assets/sample/images/tiwahu.png"
             alt=""
-            css={{ width: '200px', height: '200px' }}
+            css={css`
+              width: 200px;
+              height: 200px;
+            `}
           />
         </div>
         <div>
