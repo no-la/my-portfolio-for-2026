@@ -66,7 +66,7 @@
         {
           "type": "video",
           "mainSrc": "videos/im0-main.mp4",
-          "thumbnailSrc": "images/tf1-main.jpg"
+          "thumbnailSrc": "images/im-thumbnail.jpg"
         },
         {
           "type": "image",
