@@ -40,6 +40,10 @@ const theme = {
     medium: '18px',
     large: '20px',
   },
+  fontWeight: {
+    normal: '400',
+    bold: '700',
+  },
 };
 
 const globalStyles = (theme) => css`

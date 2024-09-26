@@ -3,16 +3,17 @@ import { css } from '@emotion/react';
 import SimpleButton from '../../components/simple-button/simple-button';
 
 const height = '50px';
-const headerStyle = css`
+const headerStyle = (theme) => css`
   display: flex;
   justify-content: space-between;
   height: ${height};
+  background-color: ${theme.colors.primary};
+  box-shadow: 0 3px 3px ${`${theme.colors.black}7a`};
 
   /* stick at top */
   position: sticky;
   top: 0;
   left: 0;
-  background-color: inherit;
   z-index: 100;
 `;
 const navStyle = css`
@@ -27,13 +28,16 @@ const navButtonStyle = (theme) => css`
   /* reset */
   text-decoration: none;
   line-height: ${height};
+
   padding: 0 8px;
-  color: ${theme.colors.black};
+  color: ${theme.colors.white};
+  font-weight: ${theme.fontWeight.bold};
+
   :visited {
-    color: ${theme.colors.black};
+    color: ${theme.colors.white};
   }
   :hover {
-    background-color: ${theme.colors.primary};
+    background-color: ${theme.colors.secondary};
   }
 `;
 
