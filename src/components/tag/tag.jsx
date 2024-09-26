@@ -1,6 +1,6 @@
 /** @jsxImportSource @emotion/react */
 
-import datas from '../../assets/data/tags.json';
+import datas from '../../assets/data/tags';
 
 const Tag = ({ tagId }) => {
   return (
