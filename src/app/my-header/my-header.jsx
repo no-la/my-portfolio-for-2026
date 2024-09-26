@@ -1,50 +1,70 @@
 /** @jsxImportSource @emotion/react */
+import { css } from '@emotion/react';
 import SimpleButton from '../../components/simple-button/simple-button';
-import styled from '@emotion/styled';
 
 const height = '50px';
-const Header = styled.header`
+const headerStyle = (theme) => css`
   display: flex;
   justify-content: space-between;
   height: ${height};
+  background-color: ${theme.colors.primary};
+  box-shadow: 0 3px 3px ${`${theme.colors.black}7a`};
 
   /* stick at top */
   position: sticky;
   top: 0;
   left: 0;
-  background-color: inherit;
   z-index: 100;
 `;
-const Nav = styled.nav`
+const navStyle = css`
   display: flex;
   align-items: center;
 `;
-const Sumbnail = styled.div`
-  background-color: rgb(208, 208, 230);
+const pageIconStyle = (theme) => css`
+  background-color: ${theme.colors.primary};
   line-height: ${height};
+`;
+const navButtonStyle = (theme) => css`
+  /* reset */
+  text-decoration: none;
+  line-height: ${height};
+
+  padding: 0 8px;
+  color: ${theme.colors.white};
+  font-weight: ${theme.fontWeight.bold};
+
+  :visited {
+    color: ${theme.colors.white};
+  }
+  :hover {
+    background-color: ${theme.colors.secondary};
+  }
 `;
 
 const MyHeader = () => {
   return (
-    <Header id="top">
-      <Sumbnail>nola&apos;s portfolio</Sumbnail>
-      <Nav>
-        {['Top', 'Skills', 'Projects', 'Others'].map(
-          (t) => {
-            return (
-              <SimpleButton
-                key={`headre-${t}-button`}
-                onClick={() =>
-                  console.log(`${t} is clicked!`)
-                }
-              >
-                {t}
-              </SimpleButton>
-            );
-          },
-        )}
-      </Nav>
-    </Header>
+    <header css={headerStyle} id="top">
+      <div css={pageIconStyle}>nola&apos;s portfolio</div>
+      <nav css={navStyle}>
+        {[
+          'Top',
+          'Profile',
+          'Skills',
+          'Projects',
+          'Others',
+        ].map((t, i) => {
+          return (
+            <a
+              key={i}
+              href={`#${t.toLowerCase()}`}
+              css={navButtonStyle}
+            >
+              {t}
+            </a>
+          );
+        })}
+      </nav>
+    </header>
   );
 };
 

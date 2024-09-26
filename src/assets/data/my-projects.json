@@ -46,7 +46,7 @@
     "name": "画像ファイル管理アプリ",
     "tags": [0, 3, 4, 5, 100],
     "summary": {
-      "thumbnail": "images/im-thumbnail.jpg",
+      "thumbnail": "src/assets/sample/images/3921310_s.jpg",
       "text": "タグ付けによって画像ファイルを管理するGUIアプリ。"
     },
     "detail": {

@@ -5,20 +5,32 @@ import Modal from '../../components/modal/modal';
 import SectionHeader from '../../components/section-header/section-header';
 import TagList from '../../components/tag-list/tag-list';
 import MediaGallery from '../../components/media-gallery/media-gallery';
+import ModalHeader from '../../components/modal/modal-header';
 
+const gap = '40px';
 const contentWrapStyle = css`
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  padding: 30px;
-  column-gap: 30px;
+  grid-template-areas: 'text media';
+  padding: ${gap};
+  gap: ${gap};
+  flex-wrap: wrap-reverse;
+
+  @media (max-width: 1000px) {
+    grid-template-areas:
+      'media'
+      'text';
+  }
 `;
 const detailWrapStyle = css`
+  grid-area: text;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  gap: 20px;
+  /* justify-content: space-between; */
+  gap: 32px;
+  max-width: 640px;
 `;
 const imageWrapStyle = css`
+  grid-area: media;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -27,6 +39,8 @@ const imageWrapStyle = css`
 const detailInformationWrapStyle = css`
   display: grid;
   grid-template-columns: auto auto auto;
+  gap: 4px 8px;
+  text-align: center;
 `;
 
 const ProjectDetailModal = ({
@@ -48,10 +62,14 @@ const ProjectDetailModal = ({
         isActive={isOpen}
         onClose={onClose}
         style={css`
-          max-width: 70%;
+          max-width: 90%;
+          @media (max-width: 1000px) {
+            position: absolute;
+            top: 10%;
+          }
         `}
       >
-        <SectionHeader>{name}</SectionHeader>
+        <ModalHeader>{name}</ModalHeader>
         <div css={contentWrapStyle}>
           <div css={detailWrapStyle}>
             <div>

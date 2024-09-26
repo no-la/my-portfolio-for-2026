@@ -2,39 +2,35 @@
 
 import { css } from '@emotion/react';
 import SkillItem from './skill-item';
+import Card from '../../components/card/card';
+import CardHeader from '../../components/card-header/card-header';
 
-const wrapStyle = (theme) => css`
-  display: flex;
-  height: 100%;
-`;
 const cardStyle = (theme) => css`
-  width: 400px;
   height: auto;
-  background-color: ${theme.colors.secondary};
-  padding: 20px;
+  background-color: ${theme.colors.white};
   display: flex;
-  row-gap: 30px;
+  row-gap: 16px;
   flex-direction: column;
+  width: 300px;
 `;
 const ulStyle = (theme) => css`
   display: grid;
   grid-template-columns: 1fr 100px;
+  row-gap: 10px;
 `;
 
 const SkillCard = ({ header, datas }) => {
   return (
-    <div css={wrapStyle}>
-      <div css={cardStyle}>
-        <h3>{header}</h3>
-        <div>
-          <ul css={ulStyle}>
-            {datas.map((data, i) => (
-              <SkillItem key={i} {...data}></SkillItem>
-            ))}
-          </ul>
-        </div>
+    <Card cardStyle={cardStyle}>
+      <CardHeader>{header}</CardHeader>
+      <div>
+        <ul css={ulStyle}>
+          {datas.map((data, i) => (
+            <SkillItem key={i} {...data}></SkillItem>
+          ))}
+        </ul>
       </div>
-    </div>
+    </Card>
   );
 };
 

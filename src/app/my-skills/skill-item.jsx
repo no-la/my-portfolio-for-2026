@@ -2,9 +2,9 @@
 
 import { css } from '@emotion/react';
 
-const divStyle = css`
+const divStyle = (theme) => css`
   text-align: center;
-  line-height: 40px;
+  border-bottom: 1px solid ${theme.colors.background};
 `;
 
 const SkillItem = ({ name, duration }) => {

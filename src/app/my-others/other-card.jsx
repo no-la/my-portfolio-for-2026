@@ -3,33 +3,51 @@
 import { css } from '@emotion/react';
 import CardHeader from '../../components/card-header/card-header';
 import TagList from '../../components/tag-list/tag-list';
+import Card from '../../components/card/card';
 
-const wrapStyle = css`
+const cardStyle = (theme) => css`
+  display: flex;
+  flex-direction: column;
+  background: transparent;
+  align-items: center;
+  width: 378px;
+`;
+const tagListStyle = css``;
+const resetPStyle = css`
+  margin-bottom: 0;
+`;
+const contentWrapStyle = css`
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 350px;
+  gap: 16px;
 `;
 
 const OtherCard = ({ name, tags, text, links }) => {
-  console.log(links);
   return (
-    <div css={wrapStyle}>
+    <Card cardStyle={cardStyle}>
       <CardHeader>{name}</CardHeader>
-      <TagList tags={tags}></TagList>
-      <div>
-        {text.map((t, i) => (
-          <p key={i}>{t}</p>
-        ))}
+      <div css={contentWrapStyle}>
+        <TagList
+          tags={tags}
+          tagListStyle={tagListStyle}
+        ></TagList>
+        <div>
+          {text.map((t, i) => (
+            <p key={i} css={resetPStyle}>
+              {t}
+            </p>
+          ))}
+        </div>
+        <ul>
+          {links.map((url, i) => (
+            <li key={i}>
+              <a href={url}>{url}</a>
+            </li>
+          ))}
+        </ul>
       </div>
-      <ul>
-        {links.map((url, i) => (
-          <li key={i}>
-            <a href={url}>{url}</a>
-          </li>
-        ))}
-      </ul>
-    </div>
+    </Card>
   );
 };
 

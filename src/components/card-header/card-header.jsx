@@ -1,15 +1,25 @@
 /** @jsxImportSource @emotion/react */
 
-const CardHeader = ({ children }) => {
+import { css } from '@emotion/react';
+
+const CardHeader = ({ cardHeaderStyle, children }) => {
   return (
-    <h3
-      css={(theme) => ({
-        backgroundColor: theme.colors.secondary,
-        textAlign: 'center',
-      })}
+    <h2
+      css={[
+        (theme) => css`
+          border-bottom: 2px dotted
+            ${theme.colors.secondary};
+          text-align: 'center';
+          width: 100%;
+          display: flex;
+          justify-content: center;
+          margin-bottom: 8px;
+        `,
+        cardHeaderStyle,
+      ]}
     >
       {children}
-    </h3>
+    </h2>
   );
 };
 

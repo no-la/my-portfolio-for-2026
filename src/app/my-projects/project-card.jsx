@@ -1,16 +1,29 @@
 /** @jsxImportSource @emotion/react */
 
 import { css } from '@emotion/react';
-import CardHeader from '../../components/card-header/card-header';
 import TagList from '../../components/tag-list/tag-list';
 import ProjectDetailModal from './project-detail-modal';
 import { useState } from 'react';
+import Card from '../../components/card/card';
+import CardHeader from '../../components/card-header/card-header';
 
-const wrapStyle = (theme) => css`
+const cardStyle = (theme) => css`
+  background-color: ${theme.colors.white};
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 400px;
+  width: 360px;
+  :hover {
+    cursor: pointer;
+  }
+`;
+const thumbnailImageStyle = (theme) => css`
+  width: 100%;
+  object-fit: cover;
+  margin-bottom: 12px;
+`;
+const summaryTextStyle = (theme) => css`
+  margin-bottom: 16px;
 `;
 
 const ProjectCard = ({
@@ -22,23 +35,18 @@ const ProjectCard = ({
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   return (
-    <div
-      css={wrapStyle}
+    <Card
+      cardStyle={cardStyle}
       onClick={() => setIsModalOpen(true)}
     >
       <img
         src={thumbnail}
         alt={`thumbnail-${name}`}
-        css={(theme) => ({
-          width: '350px',
-          objectFit: 'cover',
-        })}
+        css={(theme) => thumbnailImageStyle}
       />
       <CardHeader>{name}</CardHeader>
-      <div>
-        <div>{text}</div>
-        <TagList tags={tags} />
-      </div>
+      <div css={summaryTextStyle}>{text}</div>
+      <TagList tags={tags} />
       <ProjectDetailModal
         isOpen={isModalOpen}
         onClose={() => setIsModalOpen(false)}
@@ -46,7 +54,7 @@ const ProjectCard = ({
         tags={tags}
         {...detail}
       />
-    </div>
+    </Card>
   );
 };
 

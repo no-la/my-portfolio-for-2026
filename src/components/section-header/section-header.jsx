@@ -1,16 +1,37 @@
 /** @jsxImportSource @emotion/react */
 
+import { css } from '@emotion/react';
+
 const SectionHeader = ({ children }) => {
   return (
-    <h2
-      className="section-header"
-      css={(theme) => ({
-        backgroundColor: theme.colors.primary,
-        textAlign: 'center',
-      })}
+    <div
+      css={css`
+        display: grid;
+        grid-template-columns: 1fr auto;
+        margin-bottom: 40px;
+        margin-right: 8%;
+      `}
     >
-      {children}
-    </h2>
+      <h1
+        css={(theme) => css`
+          background-color: ${theme.colors.primary};
+          color: ${theme.colors.white};
+          padding: 10px 0px 10px 30px;
+          /* border-bottom: 4px solid ${theme.colors
+            .tertiary}; */
+        `}
+      >
+        {children}
+      </h1>
+      <div
+        css={(theme) => css`
+          /* background-color: ${theme.colors.tertiary}; */
+          background-image: url('images/section-header-decoration.png');
+          height: inherit;
+          width: 147px;
+        `}
+      ></div>
+    </div>
   );
 };
 

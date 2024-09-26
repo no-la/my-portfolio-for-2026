@@ -15,7 +15,6 @@ const carouselStyle = css`
   overflow-x: scroll;
   overflow-y: hidden;
   justify-content: center;
-  gap: 4px;
 
   ::-webkit-scrollbar {
     display: none;
@@ -25,11 +24,13 @@ const nextPrevStyle = css`
   line-height: ${height};
   font-weight: bold;
   text-align: center;
+  cursor: pointer;
 `;
 const thumbnailMediaStyle = css`
   /* width: 100px; */
   height: 100%;
   object-fit: cover;
+  cursor: pointer;
 `;
 
 const ThumbnailCarousel = ({
@@ -49,14 +50,13 @@ const ThumbnailCarousel = ({
           <li
             key={`thumbnail-media-${i}`}
             onClick={() => onSelect(i)}
-            css={(theme) => ({
-              borderWidth: '3px',
-              borderColor:
-                i === selectedIndex
-                  ? theme.colors.secondary
-                  : 'gray',
-              position: 'relative',
-            })}
+            css={(theme) => css`
+              border: ${i === selectedIndex
+                ? `3px solid ${theme.colors.tertiary}`
+                : 'none'};
+              padding: ${i === selectedIndex ? '0' : '4px'};
+              position: relative;
+            `}
           >
             {item.type == 'image' ? (
               <img
@@ -77,8 +77,9 @@ const ThumbnailCarousel = ({
                     top: 50%;
                     left: 50%;
                     transform: translate(-50%, -50%);
-                    width: 90%;
+                    width: 24px;
                     object-fit: contain;
+                    pointer-events: none;
                   `}
                   src="images\play-button.png"
                 />
