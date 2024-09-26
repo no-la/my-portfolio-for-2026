@@ -70,18 +70,18 @@
         },
         {
           "type": "image",
-          "mainSrc": "images/tf1-main.jpg",
-          "thumbnailSrc": "images/tf1-main.jpg"
+          "mainSrc": "images/im1-main.jpg",
+          "thumbnailSrc": "images/im1-main.jpg"
         },
         {
           "type": "image",
-          "mainSrc": "images/tf2-main.jpg",
-          "thumbnailSrc": "images/tf2-main.jpg"
+          "mainSrc": "images/im2-main.jpg",
+          "thumbnailSrc": "images/im2-main.jpg"
         },
         {
           "type": "image",
-          "mainSrc": "images/tf3-main.jpg",
-          "thumbnailSrc": "images/tf3-main.jpg"
+          "mainSrc": "images/im3-main.jpg",
+          "thumbnailSrc": "images/im3-main.jpg"
         }
       ]
     }
@@ -90,7 +90,7 @@
     "name": "日記&タスク記録アプリ",
     "tags": [0, 3, 4, 5, 100],
     "summary": {
-      "thumbnail": "src/assets/sample/images/3921310_s.jpg",
+      "thumbnail": "images/tr-thumbnail.jpg",
       "text": "「〇時から〇時まで～をした」という記録ができる日記アプリ。"
     },
     "detail": {
@@ -108,23 +108,13 @@
       "images": [
         {
           "type": "video",
-          "mainSrc": "videos/tf0-main.mp4",
-          "thumbnailSrc": "images/tf1-main.jpg"
+          "mainSrc": "videos/tr0-main.mp4",
+          "thumbnailSrc": "images/tr1-main.jpg"
         },
         {
           "type": "image",
-          "mainSrc": "images/tf1-main.jpg",
-          "thumbnailSrc": "images/tf1-main.jpg"
-        },
-        {
-          "type": "image",
-          "mainSrc": "images/tf2-main.jpg",
-          "thumbnailSrc": "images/tf2-main.jpg"
-        },
-        {
-          "type": "image",
-          "mainSrc": "images/tf3-main.jpg",
-          "thumbnailSrc": "images/tf3-main.jpg"
+          "mainSrc": "images/tr1-main.jpg",
+          "thumbnailSrc": "images/tr1-main.jpg"
         }
       ]
     }
