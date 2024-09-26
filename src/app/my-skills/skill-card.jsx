@@ -2,12 +2,8 @@
 
 import { css } from '@emotion/react';
 import SkillItem from './skill-item';
-import CardHeader from '../../components/card-header/card-header';
+import Card from '../../components/card/card';
 
-const wrapStyle = (theme) => css`
-  display: flex;
-  height: 100%;
-`;
 const cardStyle = (theme) => css`
   width: 350px;
   height: auto;
@@ -24,18 +20,15 @@ const ulStyle = (theme) => css`
 
 const SkillCard = ({ header, datas }) => {
   return (
-    <div css={wrapStyle}>
-      <div css={cardStyle}>
-        <CardHeader>{header}</CardHeader>
-        <div>
-          <ul css={ulStyle}>
-            {datas.map((data, i) => (
-              <SkillItem key={i} {...data}></SkillItem>
-            ))}
-          </ul>
-        </div>
+    <Card header={header} cardStyle={cardStyle}>
+      <div>
+        <ul css={ulStyle}>
+          {datas.map((data, i) => (
+            <SkillItem key={i} {...data}></SkillItem>
+          ))}
+        </ul>
       </div>
-    </div>
+    </Card>
   );
 };
 
