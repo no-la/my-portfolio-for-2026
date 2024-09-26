@@ -14,16 +14,28 @@ import MyOthers from './my-others/my-others';
 import MyFooter from './my-footer/my-footer';
 import MyHeroImage from './my-hero-image/my-hero-image';
 
+const colors0 = {
+  primary: '#baece2',
+  secondary: '#f2c5a5',
+  tertiary: '#f2c5a5',
+  background: '#fafcfa',
+  text: '#2a2a2a',
+};
+const colors1 = {
+  primary: '#56A6A7',
+  secondary: '#5CC2D9',
+  tertiary: '#F3A922',
+  background: '#E4F2F2',
+  text: '#192626',
+  // h1: '#1a787a',
+};
 const theme = {
   colors: {
-    primary: '#baece2',
-    secondary: '#f2c5a5',
-    tertiary: '#f2c5a5',
-    background: '#fafcfa',
-    text: '#2a2a2a',
+    ...colors1,
   },
   fontSizes: {
     small: '14px',
+    normal: '16px',
     medium: '18px',
     large: '20px',
   },
@@ -36,6 +48,7 @@ const globalStyles = (theme) => css`
     line-height: 1.5;
     font-weight: 400;
     font-size: ${theme.fontSizes.normal};
+    color: ${theme.colors.text};
   }
 
   h1,
@@ -50,6 +63,7 @@ const globalStyles = (theme) => css`
 
   h1 {
     font-size: 2em;
+    color: ${theme.colors.h1};
   }
   h2 {
     font-size: 1.2em;
