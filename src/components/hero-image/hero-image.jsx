@@ -4,7 +4,6 @@ import { css } from '@emotion/react';
 
 const wrapStyle = css`
   position: relative;
-  width: 100vw;
   height: 100vh;
 `;
 const imgStyle = css`
