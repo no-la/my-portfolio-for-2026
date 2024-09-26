@@ -1,9 +1,9 @@
 /** @jsxImportSource @emotion/react */
+import { css } from '@emotion/react';
 import SimpleButton from '../../components/simple-button/simple-button';
-import styled from '@emotion/styled';
 
 const height = '50px';
-const Header = styled.header`
+const headerStyle = css`
   display: flex;
   justify-content: space-between;
   height: ${height};
@@ -15,20 +15,20 @@ const Header = styled.header`
   background-color: inherit;
   z-index: 100;
 `;
-const Nav = styled.nav`
+const navStyle = css`
   display: flex;
   align-items: center;
 `;
-const Sumbnail = styled.div`
+const pageIconStyle = css`
   background-color: rgb(208, 208, 230);
   line-height: ${height};
 `;
 
 const MyHeader = () => {
   return (
-    <Header id="top">
-      <Sumbnail>nola&apos;s portfolio</Sumbnail>
-      <Nav>
+    <header css={headerStyle}>
+      <div css={pageIconStyle}>nola&apos;s portfolio</div>
+      <nav css={navStyle}>
         {['Top', 'Skills', 'Projects', 'Others'].map(
           (t) => {
             return (
@@ -43,8 +43,8 @@ const MyHeader = () => {
             );
           },
         )}
-      </Nav>
-    </Header>
+      </nav>
+    </header>
   );
 };
 
