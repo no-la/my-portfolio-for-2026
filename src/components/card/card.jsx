@@ -3,11 +3,10 @@ import { css } from '@emotion/react';
 
 const wrapStyle = (theme) => css`
   display: flex;
-  height: 100%;
+  align-self: stretch;
 `;
 const defaultCardStyle = (theme) => css`
   width: 350px;
-  height: auto;
   background-color: ${theme.colors.white};
   padding: 20px;
   border-radius: 10px;

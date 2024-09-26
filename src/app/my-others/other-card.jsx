@@ -3,17 +3,17 @@
 import { css } from '@emotion/react';
 import CardHeader from '../../components/card-header/card-header';
 import TagList from '../../components/tag-list/tag-list';
+import Card from '../../components/card/card';
 
-const wrapStyle = css`
+const cardStyle = css`
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 350px;
 `;
 
 const OtherCard = ({ name, tags, text, links }) => {
   return (
-    <div css={wrapStyle}>
+    <Card cardStyle={cardStyle}>
       <CardHeader>{name}</CardHeader>
       <TagList tags={tags}></TagList>
       <div>
@@ -28,7 +28,7 @@ const OtherCard = ({ name, tags, text, links }) => {
           </li>
         ))}
       </ul>
-    </div>
+    </Card>
   );
 };
 
