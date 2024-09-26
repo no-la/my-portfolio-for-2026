@@ -3,6 +3,9 @@
 import { css } from '@emotion/react';
 import { useState } from 'react';
 import ThumbnailCarousel from './thumbnail-carousel';
+import { useRef } from 'react';
+import { forwardRef } from 'react';
+import { useImperativeHandle } from 'react';
 
 const wrapStyle = css`
   /* width: 520px; */
@@ -21,8 +24,17 @@ const mainMediaStyle = css`
   object-fit: contain;
 `;
 
-const MediaGallery = ({ items, style }) => {
+const MediaGallery = forwardRef(({ items, style }, ref) => {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const videoRef = useRef(null);
+
+  useImperativeHandle(ref, () => ({
+    pauseVideo() {
+      if (videoRef.current) {
+        videoRef.current.pause();
+      }
+    },
+  }));
 
   return (
     <div css={[wrapStyle, style]}>
@@ -37,6 +49,7 @@ const MediaGallery = ({ items, style }) => {
           <video
             src={items[currentIndex].mainSrc}
             css={mainMediaStyle}
+            ref={videoRef}
             controls
           ></video>
         )}
@@ -58,6 +71,6 @@ const MediaGallery = ({ items, style }) => {
       />
     </div>
   );
-};
+});
 
 export default MediaGallery;

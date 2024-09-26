@@ -40,6 +40,7 @@ export default [
       ],
       semi: 'error',
       quotes: ['warn', 'single'],
+      'react/display-name': 'off',
       // ---------
 
       // React
