@@ -19,8 +19,8 @@ const navStyle = css`
   display: flex;
   align-items: center;
 `;
-const pageIconStyle = css`
-  background-color: rgb(208, 208, 230);
+const pageIconStyle = (theme) => css`
+  background-color: ${theme.colors.primary};
   line-height: ${height};
 `;
 
