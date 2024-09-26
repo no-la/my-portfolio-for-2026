@@ -26,7 +26,10 @@ const ProjectCard = ({
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   return (
-    <Card cardStyle={cardStyle}>
+    <Card
+      cardStyle={cardStyle}
+      onClick={() => setIsModalOpen(true)}
+    >
       <img
         src={thumbnail}
         alt={`thumbnail-${name}`}

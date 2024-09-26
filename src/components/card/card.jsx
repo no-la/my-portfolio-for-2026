@@ -11,10 +11,13 @@ const defaultCardStyle = (theme) => css`
   padding: 20px;
   border-radius: 10px;
 `;
-const Card = ({ cardStyle, children }) => {
+const Card = ({ cardStyle, children, onClick }) => {
   return (
     <div css={wrapStyle}>
-      <div css={[defaultCardStyle, cardStyle]}>
+      <div
+        css={[defaultCardStyle, cardStyle]}
+        onClick={onClick}
+      >
         {children}
       </div>
     </div>
