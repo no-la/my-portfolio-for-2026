@@ -6,7 +6,8 @@ const SectionHeader = ({ children }) => {
   return (
     <div
       css={css`
-        display: flex;
+        display: grid;
+        grid-template-columns: 1fr auto;
         margin-bottom: 40px;
         margin-right: 8%;
       `}
@@ -16,7 +17,6 @@ const SectionHeader = ({ children }) => {
           background-color: ${theme.colors.primary};
           color: ${theme.colors.white};
           padding: 10px 0px 10px 30px;
-          width: 80%;
           /* border-bottom: 4px solid ${theme.colors
             .tertiary}; */
         `}

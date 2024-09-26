@@ -3,20 +3,16 @@
 import { css } from '@emotion/react';
 
 const wrapStyle = css`
-  position: relative;
-  height: 100vh;
-
   /* reset */
   margin: 0;
   padding: 0;
 `;
 const imgStyle = css`
-  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
-  object-fit: cover;
+  max-height: 100vh;
+  object-fit: contain;
 `;
 
 const HeroImage = ({ imgPath, children }) => {
