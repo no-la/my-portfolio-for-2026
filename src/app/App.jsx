@@ -44,6 +44,9 @@ const theme = {
     normal: '400',
     bold: '700',
   },
+  var: {
+    headerHeight: '50px',
+  },
 };
 
 const globalStyles = (theme) => css`
@@ -97,6 +100,7 @@ const globalStyles = (theme) => css`
   }
   p {
     margin-bottom: ${theme.fontSizes.normal};
+    max-width: calc(${theme.fontSizes.normal} * 40);
   }
 `;
 

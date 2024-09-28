@@ -6,6 +6,7 @@ import SectionHeader from '../../components/section-header/section-header';
 import TagList from '../../components/tag-list/tag-list';
 import MediaGallery from '../../components/media-gallery/media-gallery';
 import ModalHeader from '../../components/modal/modal-header';
+import { useRef } from 'react';
 
 const gap = '40px';
 const contentWrapStyle = css`
@@ -56,11 +57,16 @@ const ProjectDetailModal = ({
   links,
   images,
 }) => {
+  const videoRef = useRef(null);
   return (
     <div>
       <Modal
         isActive={isOpen}
-        onClose={onClose}
+        onClose={() => {
+          videoRef.current.pauseVideo();
+          // console.log(videoRef);
+          onClose();
+        }}
         style={css`
           max-width: 90%;
           @media (max-width: 1000px) {
@@ -97,7 +103,7 @@ const ProjectDetailModal = ({
             </div>
           </div>
           <div css={imageWrapStyle}>
-            <MediaGallery items={images} />
+            <MediaGallery items={images} ref={videoRef} />
           </div>
         </div>
       </Modal>

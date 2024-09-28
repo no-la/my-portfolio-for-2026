@@ -2,23 +2,34 @@
 
 import { css } from '@emotion/react';
 
-const wrapStyle = css`
+const sectionStyle = (theme) => css`
   /* reset */
   margin: 0;
   padding: 0;
 `;
-const imgStyle = css`
+const heroImageStyle = (theme) => css`
   top: 0;
   left: 0;
   width: 100%;
-  max-height: 100vh;
-  object-fit: contain;
+  max-height: calc(100vh - ${theme.var.headerHeight});
+  object-fit: cover;
+  object-position: top;
 `;
 
-const HeroImage = ({ imgPath, children }) => {
+const HeroImage = ({
+  imgPath,
+  children,
+  id,
+  imgStyle,
+  wrapStyle,
+}) => {
   return (
-    <section css={wrapStyle}>
-      <img src={imgPath} alt="hero-image" css={imgStyle} />
+    <section css={[sectionStyle, wrapStyle]} id={id}>
+      <img
+        src={imgPath}
+        alt="hero-image"
+        css={[heroImageStyle, imgStyle]}
+      />
       {children}
     </section>
   );

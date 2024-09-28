@@ -3,8 +3,8 @@
     "name": "タクティカル・タクティクス",
     "tags": [3, 4, 5, 6, 100, 102],
     "summary": {
-      "thumbnail": "src/assets/sample/images/3921310_s.jpg",
-      "text": "株式会社f4samuraiのサマーインターンで制作したゲーム。"
+      "thumbnail": "images/tf-thumbnail.jpg",
+      "text": "株式会社f4samuraiのサマーインターンで制作したスマホ向けカードゲーム。"
     },
     "detail": {
       "text": [
@@ -46,7 +46,7 @@
     "name": "画像ファイル管理アプリ",
     "tags": [0, 3, 4, 5, 100],
     "summary": {
-      "thumbnail": "src/assets/sample/images/3921310_s.jpg",
+      "thumbnail": "images/im-thumbnail.jpg",
       "text": "タグ付けによって画像ファイルを管理するGUIアプリ。"
     },
     "detail": {
@@ -65,23 +65,23 @@
       "images": [
         {
           "type": "video",
-          "mainSrc": "videos/tf0-main.mp4",
-          "thumbnailSrc": "images/tf1-main.jpg"
+          "mainSrc": "videos/im0-main.mp4",
+          "thumbnailSrc": "images/im-thumbnail.jpg"
         },
         {
           "type": "image",
-          "mainSrc": "images/tf1-main.jpg",
-          "thumbnailSrc": "images/tf1-main.jpg"
+          "mainSrc": "images/im1-main.jpg",
+          "thumbnailSrc": "images/im1-main.jpg"
         },
         {
           "type": "image",
-          "mainSrc": "images/tf2-main.jpg",
-          "thumbnailSrc": "images/tf2-main.jpg"
+          "mainSrc": "images/im2-main.jpg",
+          "thumbnailSrc": "images/im2-main.jpg"
         },
         {
           "type": "image",
-          "mainSrc": "images/tf3-main.jpg",
-          "thumbnailSrc": "images/tf3-main.jpg"
+          "mainSrc": "images/im3-main.jpg",
+          "thumbnailSrc": "images/im3-main.jpg"
         }
       ]
     }
@@ -90,7 +90,7 @@
     "name": "日記&タスク記録アプリ",
     "tags": [0, 3, 4, 5, 100],
     "summary": {
-      "thumbnail": "src/assets/sample/images/3921310_s.jpg",
+      "thumbnail": "images/tr-thumbnail.jpg",
       "text": "「〇時から〇時まで～をした」という記録ができる日記アプリ。"
     },
     "detail": {
@@ -108,23 +108,13 @@
       "images": [
         {
           "type": "video",
-          "mainSrc": "videos/tf0-main.mp4",
-          "thumbnailSrc": "images/tf1-main.jpg"
+          "mainSrc": "videos/tr0-main.mp4",
+          "thumbnailSrc": "images/tr1-main.jpg"
         },
         {
           "type": "image",
-          "mainSrc": "images/tf1-main.jpg",
-          "thumbnailSrc": "images/tf1-main.jpg"
-        },
-        {
-          "type": "image",
-          "mainSrc": "images/tf2-main.jpg",
-          "thumbnailSrc": "images/tf2-main.jpg"
-        },
-        {
-          "type": "image",
-          "mainSrc": "images/tf3-main.jpg",
-          "thumbnailSrc": "images/tf3-main.jpg"
+          "mainSrc": "images/tr1-main.jpg",
+          "thumbnailSrc": "images/tr1-main.jpg"
         }
       ]
     }
@@ -133,7 +123,7 @@
     "name": "だっかん！モンスターの島",
     "tags": [1, 101, 200, 201, 301, 302],
     "summary": {
-      "thumbnail": "src/assets/sample/images/3921310_s.jpg",
+      "thumbnail": "images/dm-thumbnail.jpg",
       "text": "2Dタワーディフェンスゲーム。2人のチーム開発で、素材から全て自作した。"
     },
     "detail": {
@@ -153,23 +143,38 @@
       "images": [
         {
           "type": "video",
-          "mainSrc": "videos/tf0-main.mp4",
-          "thumbnailSrc": "images/tf1-main.jpg"
+          "mainSrc": "videos/dm0-main.mp4",
+          "thumbnailSrc": "images/dm-thumbnail.jpg"
         },
         {
           "type": "image",
-          "mainSrc": "images/tf1-main.jpg",
-          "thumbnailSrc": "images/tf1-main.jpg"
+          "mainSrc": "images/dm1-main.jpg",
+          "thumbnailSrc": "images/dm1-main.jpg"
         },
         {
           "type": "image",
-          "mainSrc": "images/tf2-main.jpg",
-          "thumbnailSrc": "images/tf2-main.jpg"
+          "mainSrc": "images/dm2-main.jpg",
+          "thumbnailSrc": "images/dm2-main.jpg"
         },
         {
           "type": "image",
-          "mainSrc": "images/tf3-main.jpg",
-          "thumbnailSrc": "images/tf3-main.jpg"
+          "mainSrc": "images/dm3-main.jpg",
+          "thumbnailSrc": "images/dm3-main.jpg"
+        },
+        {
+          "type": "image",
+          "mainSrc": "images/dm4-main.jpg",
+          "thumbnailSrc": "images/dm4-main.jpg"
+        },
+        {
+          "type": "image",
+          "mainSrc": "images/dm5-main.jpg",
+          "thumbnailSrc": "images/dm5-main.jpg"
+        },
+        {
+          "type": "image",
+          "mainSrc": "images/dm6-main.jpg",
+          "thumbnailSrc": "images/dm6-main.jpg"
         }
       ]
     }
@@ -178,7 +183,7 @@
     "name": "まいんすいーぱー",
     "tags": [1, 101, 200, 201, 300],
     "summary": {
-      "thumbnail": "src/assets/sample/images/3921310_s.jpg",
+      "thumbnail": "images/ms-thumbnail.jpg",
       "text": "マインスイーパーの模写。ロゴ、SE、BGMなどを自作した。"
     },
     "detail": {
@@ -194,23 +199,28 @@
       "images": [
         {
           "type": "video",
-          "mainSrc": "videos/tf0-main.mp4",
-          "thumbnailSrc": "images/tf1-main.jpg"
+          "mainSrc": "videos/ms0-main.mp4",
+          "thumbnailSrc": "images/ms1-main.jpg"
         },
         {
           "type": "image",
-          "mainSrc": "images/tf1-main.jpg",
-          "thumbnailSrc": "images/tf1-main.jpg"
+          "mainSrc": "images/ms1-main.jpg",
+          "thumbnailSrc": "images/ms1-main.jpg"
         },
         {
           "type": "image",
-          "mainSrc": "images/tf2-main.jpg",
-          "thumbnailSrc": "images/tf2-main.jpg"
+          "mainSrc": "images/ms2-main.jpg",
+          "thumbnailSrc": "images/ms2-main.jpg"
         },
         {
           "type": "image",
-          "mainSrc": "images/tf3-main.jpg",
-          "thumbnailSrc": "images/tf3-main.jpg"
+          "mainSrc": "images/ms3-main.jpg",
+          "thumbnailSrc": "images/ms3-main.jpg"
+        },
+        {
+          "type": "image",
+          "mainSrc": "images/ms4-main.jpg",
+          "thumbnailSrc": "images/ms4-main.jpg"
         }
       ]
     }
@@ -219,7 +229,7 @@
     "name": "Discord何でもBot",
     "tags": [0, 100, 102],
     "summary": {
-      "thumbnail": "src/assets/sample/images/3921310_s.jpg",
+      "thumbnail": "images/db-thumbnail.jpg",
       "text": "自分のDiscordサーバーで使うための何でもBot。"
     },
     "detail": {
@@ -227,34 +237,34 @@
         "サーバーの管理からミニゲームの進行まで何でもするDiscordのBot。",
         "友人を集めたDiscordサーバーを運用していたが、チャンネル数が多くなるにつれて自分一人で管理することに限界を感じ、discord.pyを使ってこのBotを作った。",
         "現在までゆるく開発を続けていて、メンバーの誕生日を祝う機能、マルコフ連鎖で生成した文章を返すコマンド、許可したチャンネルにのみ有効な「チャンネル削除」コマンド、数字当てゲームやワード人狼、Itoといったボードゲームの進行なども実装した。",
-        "この開発に参加したいという声があったこともあり、2024/2頃に開発体制の見直しをして、ディレクトリ構成の変更、pytestの導入、ユーティリティ関数の作成、discord.pyのCogを使う方法への変更を含めたリファクタリングなどをした。それに伴い、新機能追加時に必要なファイルをそれぞれのテンプレートをもとに生成するスクリプト、プロジェクトの説明をするmdファイル、実際に手を動かして新機能の追加をするチュートリアルなどを作成した。",
+        "2024/2頃に開発への参加の申し出があり、開発体制の見直しとして、ディレクトリ構成の変更、pytestの導入、ユーティリティ関数の作成、discord.pyのCogを使う方法への変更を含めたリファクタリングなどをした。それに伴い、新機能追加時に必要なファイルをそれぞれのテンプレートをもとに生成するスクリプト、プロジェクトの説明をするmdファイル、実際に手を動かして新機能の追加をするチュートリアルなどを作成した。",
         "本格的な開発をするのはこのBotが初めてで、Python、ひいてはプログラミングの基礎を学んだり、外部ライブラリのドキュメントを読む胆力を身につけたりと、非常に多くのものを得た。"
       ],
-      "duration": "6ヶ月程度？",
+      "duration": "6ヶ月程度",
       "since": "2021/6",
       "until": "",
       "headcount": 1,
       "links": [],
       "images": [
         {
-          "type": "video",
-          "mainSrc": "videos/tf0-main.mp4",
-          "thumbnailSrc": "images/tf1-main.jpg"
+          "type": "image",
+          "mainSrc": "images/db0-main.jpg",
+          "thumbnailSrc": "images/db0-main.jpg"
         },
         {
           "type": "image",
-          "mainSrc": "images/tf1-main.jpg",
-          "thumbnailSrc": "images/tf1-main.jpg"
+          "mainSrc": "images/db1-main.jpg",
+          "thumbnailSrc": "images/db1-main.jpg"
         },
         {
           "type": "image",
-          "mainSrc": "images/tf2-main.jpg",
-          "thumbnailSrc": "images/tf2-main.jpg"
+          "mainSrc": "images/db2-main.jpg",
+          "thumbnailSrc": "images/db2-main.jpg"
         },
         {
           "type": "image",
-          "mainSrc": "images/tf3-main.jpg",
-          "thumbnailSrc": "images/tf3-main.jpg"
+          "mainSrc": "images/db3-main.jpg",
+          "thumbnailSrc": "images/db3-main.jpg"
         }
       ]
     }
@@ -263,7 +273,7 @@
     "name": "よみうた",
     "tags": [3, 4, 5, 100, 102, 200],
     "summary": {
-      "thumbnail": "src/assets/sample/images/3921310_s.jpg",
+      "thumbnail": "images/yu-thumbnail.jpg",
       "text": "入力した俳句に背景画像を付ける簡単なWebアプリ。"
     },
     "detail": {
@@ -283,23 +293,23 @@
       "images": [
         {
           "type": "video",
-          "mainSrc": "videos/tf0-main.mp4",
-          "thumbnailSrc": "images/tf1-main.jpg"
+          "mainSrc": "videos/yu0-main.mp4",
+          "thumbnailSrc": "images/yu1-main.jpg"
         },
         {
           "type": "image",
-          "mainSrc": "images/tf1-main.jpg",
-          "thumbnailSrc": "images/tf1-main.jpg"
+          "mainSrc": "images/yu2-main.jpg",
+          "thumbnailSrc": "images/yu2-main.jpg"
         },
         {
           "type": "image",
-          "mainSrc": "images/tf2-main.jpg",
-          "thumbnailSrc": "images/tf2-main.jpg"
+          "mainSrc": "images/yu3-main.jpg",
+          "thumbnailSrc": "images/yu3-main.jpg"
         },
         {
           "type": "image",
-          "mainSrc": "images/tf3-main.jpg",
-          "thumbnailSrc": "images/tf3-main.jpg"
+          "mainSrc": "images/yu1-main.jpg",
+          "thumbnailSrc": "images/yu1-main.jpg"
         }
       ]
     }

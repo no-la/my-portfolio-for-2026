@@ -1,12 +1,10 @@
 /** @jsxImportSource @emotion/react */
 import { css } from '@emotion/react';
-import SimpleButton from '../../components/simple-button/simple-button';
 
-const height = '50px';
 const headerStyle = (theme) => css`
   display: flex;
   justify-content: space-between;
-  height: ${height};
+  height: ${theme.var.headerHeight};
   background-color: ${theme.colors.primary};
   box-shadow: 0 3px 3px ${`${theme.colors.black}7a`};
 
@@ -22,12 +20,16 @@ const navStyle = css`
 `;
 const pageIconStyle = (theme) => css`
   background-color: ${theme.colors.primary};
-  line-height: ${height};
+  line-height: ${theme.var.headerHeight};
+  font-size: ${theme.fontSizes.large};
+  color: ${theme.colors.white};
+  font-weight: ${theme.fontWeight.bold};
+  margin-left: ${theme.fontSizes.normal};
 `;
 const navButtonStyle = (theme) => css`
   /* reset */
   text-decoration: none;
-  line-height: ${height};
+  line-height: ${theme.var.headerHeight};
 
   padding: 0 8px;
   color: ${theme.colors.white};
@@ -43,7 +45,7 @@ const navButtonStyle = (theme) => css`
 
 const MyHeader = () => {
   return (
-    <header css={headerStyle} id="top">
+    <header css={headerStyle}>
       <div css={pageIconStyle}>nola&apos;s portfolio</div>
       <nav css={navStyle}>
         {[
