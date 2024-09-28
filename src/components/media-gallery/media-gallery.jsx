@@ -9,15 +9,15 @@ import { useImperativeHandle } from 'react';
 
 const width = '520px';
 const wrapStyle = css`
+  display: flex;
+  flex-direction: column;
   width: ${width};
-  /* height: 440px; */
 `;
 const mainViewStyle = css`
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 440px;
-  margin-bottom: 20px;
+  max-height: 440px;
 `;
 const mainMediaStyle = css`
   width: ${width};
