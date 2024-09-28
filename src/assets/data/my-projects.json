@@ -229,7 +229,7 @@
     "name": "Discord何でもBot",
     "tags": [0, 100, 102],
     "summary": {
-      "thumbnail": "src/assets/sample/images/3921310_s.jpg",
+      "thumbnail": "images/db-thumbnail.jpg",
       "text": "自分のDiscordサーバーで使うための何でもBot。"
     },
     "detail": {
@@ -248,8 +248,23 @@
       "images": [
         {
           "type": "image",
-          "mainSrc": "src/assets/sample/images/3921310_s.jpg",
-          "thumbnailSrc": "src/assets/sample/images/3921310_s.jpg"
+          "mainSrc": "images/db0-main.jpg",
+          "thumbnailSrc": "images/db0-main.jpg"
+        },
+        {
+          "type": "image",
+          "mainSrc": "images/db1-main.jpg",
+          "thumbnailSrc": "images/db1-main.jpg"
+        },
+        {
+          "type": "image",
+          "mainSrc": "images/db2-main.jpg",
+          "thumbnailSrc": "images/db2-main.jpg"
+        },
+        {
+          "type": "image",
+          "mainSrc": "images/db3-main.jpg",
+          "thumbnailSrc": "images/db3-main.jpg"
         }
       ]
     }
@@ -258,7 +273,7 @@
     "name": "よみうた",
     "tags": [3, 4, 5, 100, 102, 200],
     "summary": {
-      "thumbnail": "src/assets/sample/images/3921310_s.jpg",
+      "thumbnail": "images/yu-thumbnail.jpg",
       "text": "入力した俳句に背景画像を付ける簡単なWebアプリ。"
     },
     "detail": {
@@ -277,9 +292,24 @@
       "links": ["https://no-la.github.io/utayomi/"],
       "images": [
         {
+          "type": "video",
+          "mainSrc": "videos/yu0-main.mp4",
+          "thumbnailSrc": "images/yu1-main.jpg"
+        },
+        {
           "type": "image",
-          "mainSrc": "src/assets/sample/images/3921310_s.jpg",
-          "thumbnailSrc": "src/assets/sample/images/3921310_s.jpg"
+          "mainSrc": "images/yu2-main.jpg",
+          "thumbnailSrc": "images/yu2-main.jpg"
+        },
+        {
+          "type": "image",
+          "mainSrc": "images/yu3-main.jpg",
+          "thumbnailSrc": "images/yu3-main.jpg"
+        },
+        {
+          "type": "image",
+          "mainSrc": "images/yu1-main.jpg",
+          "thumbnailSrc": "images/yu1-main.jpg"
         }
       ]
     }
