@@ -100,6 +100,7 @@ const globalStyles = (theme) => css`
   }
   p {
     margin-bottom: ${theme.fontSizes.normal};
+    max-width: calc(${theme.fontSizes.normal} * 40);
   }
 `;
 
