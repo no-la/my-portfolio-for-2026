@@ -37,9 +37,6 @@ const Modal = ({ onClose, isActive, style, children }) => {
         css={[
           (theme) => css`
             background-color: ${theme.colors.white};
-            border-radius: 10px;
-            overflow-x: hidden;
-            overflow-y: auto;
             cursor: default;
             max-height: 85%;
           `,

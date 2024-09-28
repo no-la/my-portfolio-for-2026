@@ -114,6 +114,7 @@ const globalStyles = (theme) => css`
   }
   ::-webkit-scrollbar-track {
     background-color: ${theme.colors.background};
+    border-radius: 10px;
   }
   ::-webkit-scrollbar-corner {
     /* display: block; */

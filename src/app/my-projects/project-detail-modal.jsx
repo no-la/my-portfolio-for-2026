@@ -70,6 +70,10 @@ const ProjectDetailModal = ({
         style={css`
           max-width: 90%;
           max-height: 89%;
+          border-radius: 10px;
+          overflow-x: hidden;
+          overflow-y: auto;
+
           @media (max-width: 1000px) {
             position: absolute;
             top: 10%;

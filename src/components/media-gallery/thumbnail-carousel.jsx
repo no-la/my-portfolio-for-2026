@@ -44,13 +44,14 @@ const ThumbnailCarousel = ({
   onSelect,
   onPrev,
   onNext,
+  style,
 }) => {
   return (
     <div css={wrapStyle}>
       {/* <span css={nextPrevStyle} onClick={onPrev}>
       {'<'}
       </span> */}
-      <ul css={carouselStyle}>
+      <ul css={[carouselStyle, style]}>
         {items.map((item, i) => (
           <li
             key={`thumbnail-media-${i}`}

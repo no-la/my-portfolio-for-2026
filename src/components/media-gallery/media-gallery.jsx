@@ -25,53 +25,58 @@ const mainMediaStyle = css`
   object-fit: contain;
 `;
 
-const MediaGallery = forwardRef(({ items, style }, ref) => {
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const videoRef = useRef(null);
+const MediaGallery = forwardRef(
+  ({ items, galleryStyle, carouselStyle }, ref) => {
+    const [currentIndex, setCurrentIndex] = useState(0);
+    const videoRef = useRef(null);
 
-  useImperativeHandle(ref, () => ({
-    pauseVideo() {
-      if (videoRef.current) {
-        videoRef.current.pause();
-      }
-    },
-  }));
+    useImperativeHandle(ref, () => ({
+      pauseVideo() {
+        if (videoRef.current) {
+          videoRef.current.pause();
+        }
+      },
+    }));
 
-  return (
-    <div css={[wrapStyle, style]}>
-      <div css={mainViewStyle}>
-        {items[currentIndex].type === 'image' ? (
-          <img
-            src={items[currentIndex].mainSrc}
-            alt={`main-media-${currentIndex}`}
-            css={mainMediaStyle}
-          />
-        ) : (
-          <video
-            src={items[currentIndex].mainSrc}
-            css={mainMediaStyle}
-            ref={videoRef}
-            controls
-          ></video>
-        )}
+    return (
+      <div css={[wrapStyle, galleryStyle]}>
+        <div css={mainViewStyle}>
+          {items[currentIndex].type === 'image' ? (
+            <img
+              src={items[currentIndex].mainSrc}
+              alt={`main-media-${currentIndex}`}
+              css={mainMediaStyle}
+            />
+          ) : (
+            <video
+              src={items[currentIndex].mainSrc}
+              css={mainMediaStyle}
+              ref={videoRef}
+              controls
+            ></video>
+          )}
+        </div>
+        <ThumbnailCarousel
+          items={items}
+          selectedIndex={currentIndex}
+          onNext={() =>
+            setCurrentIndex(
+              (currentIndex + 1) % items.length,
+            )
+          }
+          onPrev={() =>
+            setCurrentIndex(
+              (((currentIndex - 1) % items.length) +
+                items.length) %
+                items.length,
+            )
+          }
+          onSelect={(i) => setCurrentIndex(i)}
+          style={carouselStyle}
+        />
       </div>
-      <ThumbnailCarousel
-        items={items}
-        selectedIndex={currentIndex}
-        onNext={() =>
-          setCurrentIndex((currentIndex + 1) % items.length)
-        }
-        onPrev={() =>
-          setCurrentIndex(
-            (((currentIndex - 1) % items.length) +
-              items.length) %
-              items.length,
-          )
-        }
-        onSelect={(i) => setCurrentIndex(i)}
-      />
-    </div>
-  );
-});
+    );
+  },
+);
 
 export default MediaGallery;
