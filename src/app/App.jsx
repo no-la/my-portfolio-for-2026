@@ -44,6 +44,9 @@ const theme = {
     normal: '400',
     bold: '700',
   },
+  var: {
+    headerHeight: '50px',
+  },
 };
 
 const globalStyles = (theme) => css`
