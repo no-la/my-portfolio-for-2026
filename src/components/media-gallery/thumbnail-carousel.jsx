@@ -2,22 +2,28 @@
 
 import { css } from '@emotion/react';
 
-const height = '60px';
+const height = '90px';
 
-const wrapStyle = css`
+const wrapStyle = (theme) => css`
   display: flex;
   height: ${height};
   width: 100%;
 `;
-const carouselStyle = css`
+const carouselStyle = (theme) => css`
   display: flex;
-  width: 100%;
+  min-width: 100%;
   overflow-x: scroll;
   overflow-y: hidden;
-  justify-content: center;
+  column-gap: 3px;
+  padding: 3px 3px 6px 3px;
+  background-color: ${theme.colors.background};
 
-  ::-webkit-scrollbar {
-    display: none;
+  /* justify-content: center; */
+  li:first-child {
+    margin-left: auto;
+  }
+  li:last-child {
+    margin-right: auto;
   }
 `;
 const nextPrevStyle = css`
@@ -42,21 +48,29 @@ const ThumbnailCarousel = ({
 }) => {
   return (
     <div css={wrapStyle}>
-      <span css={nextPrevStyle} onClick={onPrev}>
-        {'<'}
-      </span>
+      {/* <span css={nextPrevStyle} onClick={onPrev}>
+      {'<'}
+      </span> */}
       <ul css={carouselStyle}>
         {items.map((item, i) => (
           <li
             key={`thumbnail-media-${i}`}
             onClick={() => onSelect(i)}
-            css={(theme) => css`
-              border: ${i === selectedIndex
-                ? `3px solid ${theme.colors.tertiary}`
-                : 'none'};
-              padding: ${i === selectedIndex ? '0' : '4px'};
-              position: relative;
-            `}
+            css={[
+              (theme) => {
+                if (i != selectedIndex) return null;
+                return css`
+                  box-shadow:
+                    3px 3px ${theme.colors.tertiary},
+                    -3px 3px ${theme.colors.tertiary},
+                    3px -3px ${theme.colors.tertiary},
+                    -3px -3px ${theme.colors.tertiary};
+                `;
+              },
+              css`
+                position: relative;
+              `,
+            ]}
           >
             {item.type == 'image' ? (
               <img
@@ -88,9 +102,9 @@ const ThumbnailCarousel = ({
           </li>
         ))}
       </ul>
-      <span css={nextPrevStyle} onClick={onNext}>
+      {/* <span css={nextPrevStyle} onClick={onNext}>
         {'>'}
-      </span>
+      </span> */}
     </div>
   );
 };
