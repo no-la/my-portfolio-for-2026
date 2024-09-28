@@ -15,6 +15,13 @@ const cardStyle = (theme) => css`
   width: 360px;
   :hover {
     cursor: pointer;
+    box-shadow:
+      3px 3px 1px ${theme.colors.tertiary},
+      3px -3px 1px ${theme.colors.tertiary},
+      -3px 3px 1px ${theme.colors.tertiary},
+      -3px -3px 1px ${theme.colors.tertiary};
+    position: relative;
+    bottom: 4px;
   }
 `;
 const thumbnailImageStyle = (theme) => css`
