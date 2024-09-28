@@ -13,6 +13,9 @@ const cardStyle = (theme) => css`
   flex-direction: column;
   align-items: center;
   width: 360px;
+
+  /* animation */
+  transition: all 0.2s ease-in-out;
   :hover {
     cursor: pointer;
     box-shadow:

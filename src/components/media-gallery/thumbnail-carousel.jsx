@@ -69,6 +69,7 @@ const ThumbnailCarousel = ({
               },
               css`
                 position: relative;
+                transition: all 0.2s ease-in-out;
               `,
             ]}
           >
