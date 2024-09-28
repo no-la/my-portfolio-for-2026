@@ -1,6 +1,5 @@
 /** @jsxImportSource @emotion/react */
 import { css } from '@emotion/react';
-import SimpleButton from '../../components/simple-button/simple-button';
 
 const headerStyle = (theme) => css`
   display: flex;
@@ -22,6 +21,10 @@ const navStyle = css`
 const pageIconStyle = (theme) => css`
   background-color: ${theme.colors.primary};
   line-height: ${theme.var.headerHeight};
+  font-size: ${theme.fontSizes.large};
+  color: ${theme.colors.white};
+  font-weight: ${theme.fontWeight.bold};
+  margin-left: ${theme.fontSizes.normal};
 `;
 const navButtonStyle = (theme) => css`
   /* reset */
