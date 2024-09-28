@@ -37,8 +37,9 @@ const imageWrapStyle = css`
   justify-content: center;
   align-items: center;
 `;
-const detailInformationWrapStyle = css`
+const detailInformationWrapStyle = (theme) => css`
   display: grid;
+  border-left: 8px solid ${theme.colors.secondary};
   grid-template-columns: auto auto auto;
   gap: 4px 8px;
   text-align: center;
