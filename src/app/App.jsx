@@ -102,9 +102,11 @@ const globalStyles = (theme) => css`
     margin-bottom: ${theme.fontSizes.normal};
     max-width: calc(${theme.fontSizes.normal} * 40);
   }
+
+  /* for scrollbar */
   ::-webkit-scrollbar {
     height: 16px;
-    width: 8px;
+    width: 12px;
   }
   ::-webkit-scrollbar-thumb {
     background-color: ${theme.colors.secondary};
@@ -116,6 +118,7 @@ const globalStyles = (theme) => css`
   ::-webkit-scrollbar-corner {
     /* display: block; */
   }
+  /* ---------- */
 `;
 
 const App = () => {
