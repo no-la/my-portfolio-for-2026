@@ -2,7 +2,6 @@
 
 import { css } from '@emotion/react';
 import Modal from '../../components/modal/modal';
-import SectionHeader from '../../components/section-header/section-header';
 import TagList from '../../components/tag-list/tag-list';
 import MediaGallery from '../../components/media-gallery/media-gallery';
 import ModalHeader from '../../components/modal/modal-header';
@@ -37,8 +36,9 @@ const imageWrapStyle = css`
   justify-content: center;
   align-items: center;
 `;
-const detailInformationWrapStyle = css`
+const detailInformationWrapStyle = (theme) => css`
   display: grid;
+  border-left: 8px solid ${theme.colors.secondary};
   grid-template-columns: auto auto auto;
   gap: 4px 8px;
   text-align: center;
@@ -69,6 +69,11 @@ const ProjectDetailModal = ({
         }}
         style={css`
           max-width: 90%;
+          max-height: 89%;
+          border-radius: 10px;
+          overflow-x: hidden;
+          overflow-y: auto;
+
           @media (max-width: 1000px) {
             position: absolute;
             top: 10%;
@@ -95,11 +100,15 @@ const ProjectDetailModal = ({
               <TagList tags={tags} />
             </div>
             <div>
-              {links.map((url, i) => (
-                <a href={url} key={i}>
-                  {url}
-                </a>
-              ))}
+              {links.map((url, i) =>
+                typeof url == 'string' ? (
+                  <a href={url} key={i}>
+                    {url}
+                  </a>
+                ) : (
+                  url
+                ),
+              )}
             </div>
           </div>
           <div css={imageWrapStyle}>

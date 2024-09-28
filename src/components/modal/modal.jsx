@@ -1,6 +1,25 @@
 /** @jsxImportSource @emotion/react */
 
-import { css } from '@emotion/react';
+import { css, keyframes } from '@emotion/react';
+import { useReducer } from 'react';
+
+const openTransition = keyframes`
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+`;
+const openModalTransition = keyframes`
+   0% {
+    transform: translate(0px, -60px) scale(0.9, 0.9);
+  }
+  100% {
+    transform: translate(0px, 0px) scale(1, 1);
+  }
+`;
+// closeTransition ...
 
 const Modal = ({ onClose, isActive, style, children }) => {
   return (
@@ -15,7 +34,9 @@ const Modal = ({ onClose, isActive, style, children }) => {
         background-color: ${`${theme.colors.black}78`};
         align-items: center;
         justify-content: center;
+        z-index: 999;
 
+        animation: ${openTransition} 200ms ease-out;
         /* for not scroll background */
         overscroll-behavior: none;
         overflow-y: scroll;
@@ -36,11 +57,9 @@ const Modal = ({ onClose, isActive, style, children }) => {
         css={[
           (theme) => css`
             background-color: ${theme.colors.white};
-            border-radius: 10px;
-            overflow-x: hidden;
-            overflow-y: auto;
             cursor: default;
             max-height: 85%;
+            animation: ${openModalTransition} 200ms ease-out;
           `,
           style,
         ]}

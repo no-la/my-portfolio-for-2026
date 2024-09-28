@@ -13,8 +13,18 @@ const cardStyle = (theme) => css`
   flex-direction: column;
   align-items: center;
   width: 360px;
+
+  /* animation */
+  transition: all 0.2s ease-in-out;
   :hover {
     cursor: pointer;
+    box-shadow:
+      3px 3px 1px ${theme.colors.tertiary},
+      3px -3px 1px ${theme.colors.tertiary},
+      -3px 3px 1px ${theme.colors.tertiary},
+      -3px -3px 1px ${theme.colors.tertiary};
+    position: relative;
+    bottom: 4px;
   }
 `;
 const thumbnailImageStyle = (theme) => css`

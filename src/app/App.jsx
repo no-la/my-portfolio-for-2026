@@ -102,6 +102,24 @@ const globalStyles = (theme) => css`
     margin-bottom: ${theme.fontSizes.normal};
     max-width: calc(${theme.fontSizes.normal} * 40);
   }
+
+  /* for scrollbar */
+  ::-webkit-scrollbar {
+    height: 16px;
+    width: 12px;
+  }
+  ::-webkit-scrollbar-thumb {
+    background-color: ${theme.colors.secondary};
+    border-radius: 8px;
+  }
+  ::-webkit-scrollbar-track {
+    background-color: ${theme.colors.background};
+    border-radius: 10px;
+  }
+  ::-webkit-scrollbar-corner {
+    /* display: block; */
+  }
+  /* ---------- */
 `;
 
 const App = () => {

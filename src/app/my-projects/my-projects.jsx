@@ -3,7 +3,7 @@
 import { css } from '@emotion/react';
 import SectionHeader from '../../components/section-header/section-header';
 import ProjectCard from './project-card';
-import datas from '../../assets/data/my-projects.json';
+import datas from '../../assets/data/my-projects';
 
 const wrapStyle = css`
   display: flex;
