@@ -8,7 +8,7 @@ import { forwardRef } from 'react';
 import { useImperativeHandle } from 'react';
 
 const width = '520px';
-const wrapStyle = css`
+const wrapStyle = (theme) => css`
   display: flex;
   flex-direction: column;
   width: ${width};

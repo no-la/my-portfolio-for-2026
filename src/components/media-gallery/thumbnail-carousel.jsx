@@ -11,7 +11,6 @@ const wrapStyle = (theme) => css`
 `;
 const carouselStyle = (theme) => css`
   display: flex;
-  min-width: 100%;
   overflow-x: scroll;
   overflow-y: hidden;
   column-gap: 3px;
@@ -19,7 +18,7 @@ const carouselStyle = (theme) => css`
   background-color: ${theme.colors.background};
 
   /* justify-content: center; */
-  li:first-child {
+  li:first-of-type {
     margin-left: auto;
   }
   li:last-child {
