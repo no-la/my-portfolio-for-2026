@@ -70,6 +70,7 @@ const ProjectDetailModal = ({
         }}
         style={css`
           max-width: 90%;
+          max-height: 89%;
           @media (max-width: 1000px) {
             position: absolute;
             top: 10%;
@@ -96,11 +97,15 @@ const ProjectDetailModal = ({
               <TagList tags={tags} />
             </div>
             <div>
-              {links.map((url, i) => (
-                <a href={url} key={i}>
-                  {url}
-                </a>
-              ))}
+              {links.map((url, i) =>
+                typeof url == 'string' ? (
+                  <a href={url} key={i}>
+                    {url}
+                  </a>
+                ) : (
+                  url
+                ),
+              )}
             </div>
           </div>
           <div css={imageWrapStyle}>

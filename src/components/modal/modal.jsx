@@ -15,6 +15,7 @@ const Modal = ({ onClose, isActive, style, children }) => {
         background-color: ${`${theme.colors.black}78`};
         align-items: center;
         justify-content: center;
+        z-index: 999;
 
         /* for not scroll background */
         overscroll-behavior: none;
