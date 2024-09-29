@@ -1,6 +1,26 @@
 /** @jsxImportSource @emotion/react */
-import { css } from '@emotion/react';
+import { css, keyframes } from '@emotion/react';
 import HeroImage from '../../components/hero-image/hero-image';
+
+const appearObakeAnimation = keyframes`
+  0% {
+    opacity: 0;
+    transform: translate(15px, 24px) scale(0.8);
+  }
+  25%{
+    transform: translate(9px, 18px) scale(0.85);
+  }
+  50%{
+    transform: translate(7px, 12px) scale(0.9);
+  }
+  75%{
+    transform: translate(3px, 6px) scale(0.95);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0px, 0px) scale(1);
+  }
+`;
 
 const MyHeroImage = () => {
   return (
@@ -29,6 +49,7 @@ const MyHeroImage = () => {
           css={css`
             width: 300px;
             height: 300px;
+            animation: ${appearObakeAnimation} 1s linear;
           `}
         />
         <h1
