@@ -6,6 +6,7 @@
 
 - HTML
 - CSS
+- Emotion
 - React
 - JavaScript
 - ESlint
