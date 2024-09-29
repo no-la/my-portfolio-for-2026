@@ -24,7 +24,7 @@ const MyProfile = () => {
       <div css={wrapStyle}>
         <div>
           <img
-            src="src/assets/sample/images/tiwahu.png"
+            src={datas.image}
             alt=""
             css={css`
               width: 200px;
