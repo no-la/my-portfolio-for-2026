@@ -25,7 +25,7 @@ const pageIconStyle = (theme) => css`
   font-size: ${theme.fontSizes.large};
   color: ${theme.colors.white};
   font-weight: ${theme.fontWeight.bold};
-  margin-left: 4px;
+  margin-left: 12px;
   height: ${theme.var.headerHeight};
   column-gap: 2px;
 `;
@@ -50,14 +50,14 @@ const MyHeader = () => {
   return (
     <header css={headerStyle}>
       <div css={pageIconStyle}>
-        <img
+        {/* <img
           src="images/obake.png"
           alt="page-icon"
           css={css`
             height: 100%;
             object-fit: contain;
           `}
-        />
+        /> */}
         <div>nola&apos;s portfolio</div>
       </div>
       <nav css={navStyle}>

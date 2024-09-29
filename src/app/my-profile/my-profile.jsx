@@ -19,7 +19,7 @@ const imgStyle = (theme) => css`
   height: ${imgSize};
   border: 3px solid ${theme.colors.black};
   border-radius: 100px;
-  background-color: ${theme.colors.white};
+  background-color: ${theme.colors.secondary};
 `;
 const resetPStyle = css`
   margin-bottom: 0;
