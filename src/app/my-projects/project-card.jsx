@@ -34,6 +34,7 @@ const thumbnailImageStyle = (theme) => css`
 `;
 const summaryTextStyle = (theme) => css`
   margin-bottom: 16px;
+  text-align: center;
 `;
 
 const ProjectCard = ({

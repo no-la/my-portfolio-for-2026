@@ -5,13 +5,21 @@ import SectionHeader from '../../components/section-header/section-header';
 import CardHeader from '../../components/card-header/card-header';
 import datas from '../../assets/data/my-profile.json';
 
-const wrapStyle = css`
+const imgSize = '160px';
+const wrapStyle = (theme) => css`
   display: flex;
   padding: 30px 100px;
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 20px 30px;
+  gap: 20px 36px;
+`;
+const imgStyle = (theme) => css`
+  width: ${imgSize};
+  height: ${imgSize};
+  border: 3px solid ${theme.colors.black};
+  border-radius: 100px;
+  background-color: ${theme.colors.white};
 `;
 const resetPStyle = css`
   margin-bottom: 0;
@@ -23,14 +31,7 @@ const MyProfile = () => {
       <SectionHeader>Profile</SectionHeader>
       <div css={wrapStyle}>
         <div>
-          <img
-            src="src/assets/sample/images/tiwahu.png"
-            alt=""
-            css={css`
-              width: 200px;
-              height: 200px;
-            `}
-          />
+          <img src={datas.image} alt="" css={imgStyle} />
         </div>
         <div>
           <CardHeader>{datas.name}</CardHeader>

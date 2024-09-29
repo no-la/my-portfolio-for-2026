@@ -39,7 +39,7 @@ export default [
         { ignore: ['css'] },
       ],
       semi: 'error',
-      quotes: ['warn', 'single'],
+      quotes: ['warn', 'single', { avoidEscape: true }],
       'react/display-name': 'off',
       // ---------
 
