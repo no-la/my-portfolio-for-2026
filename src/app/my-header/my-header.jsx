@@ -19,12 +19,14 @@ const navStyle = css`
   align-items: center;
 `;
 const pageIconStyle = (theme) => css`
+  display: flex;
   background-color: ${theme.colors.primary};
   line-height: ${theme.var.headerHeight};
   font-size: ${theme.fontSizes.large};
   color: ${theme.colors.white};
   font-weight: ${theme.fontWeight.bold};
   margin-left: ${theme.fontSizes.normal};
+  height: ${theme.var.headerHeight};
 `;
 const navButtonStyle = (theme) => css`
   /* reset */
@@ -46,7 +48,17 @@ const navButtonStyle = (theme) => css`
 const MyHeader = () => {
   return (
     <header css={headerStyle}>
-      <div css={pageIconStyle}>nola&apos;s portfolio</div>
+      <div css={pageIconStyle}>
+        <img
+          src="images/obake.png"
+          alt="page-icon"
+          css={css`
+            height: 100%;
+            object-fit: contain;
+          `}
+        />
+        <div>nola&apos;s portfolio</div>
+      </div>
       <nav css={navStyle}>
         {[
           'Top',
