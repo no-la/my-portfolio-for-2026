@@ -6,7 +6,7 @@ import CardHeader from '../../components/card-header/card-header';
 import datas from '../../assets/data/my-profile.json';
 
 const imgSize = '160px';
-const wrapStyle = css`
+const wrapStyle = (theme) => css`
   display: flex;
   padding: 30px 100px;
   align-items: center;
@@ -17,9 +17,7 @@ const wrapStyle = css`
 const imgStyle = (theme) => css`
   width: ${imgSize};
   height: ${imgSize};
-  /* padding: 12px; */
-  border: 2px solid ${theme.colors.primary};
-  /* border: 1px solid ${theme.colors.black}; */
+  border: 3px solid ${theme.colors.black};
   border-radius: 100px;
   background-color: ${theme.colors.white};
 `;
