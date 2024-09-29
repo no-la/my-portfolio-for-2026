@@ -37,6 +37,7 @@ const navButtonStyle = (theme) => css`
   padding: 0 8px;
   color: ${theme.colors.white};
   font-weight: ${theme.fontWeight.bold};
+  transition: all 0.2s ease-out;
 
   :visited {
     color: ${theme.colors.white};
