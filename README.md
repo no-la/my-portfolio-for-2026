@@ -9,7 +9,7 @@
 - Emotion
 - React
 - JavaScript
-- ESlint
+- ESLint
 - Prettier
 - pnpm
 - Vite
