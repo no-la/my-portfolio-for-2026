@@ -52,7 +52,7 @@ const datas = {
     color: '#ffad99',
   },
   103: {
-    name: 'ESlint',
+    name: 'ESLint',
     color: '#bbb2ff',
   },
   104: {
