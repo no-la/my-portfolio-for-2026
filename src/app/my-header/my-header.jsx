@@ -25,8 +25,9 @@ const pageIconStyle = (theme) => css`
   font-size: ${theme.fontSizes.large};
   color: ${theme.colors.white};
   font-weight: ${theme.fontWeight.bold};
-  margin-left: ${theme.fontSizes.normal};
+  margin-left: 4px;
   height: ${theme.var.headerHeight};
+  column-gap: 2px;
 `;
 const navButtonStyle = (theme) => css`
   /* reset */
