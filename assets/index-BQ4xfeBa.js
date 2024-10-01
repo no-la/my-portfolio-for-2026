@@ -109,7 +109,7 @@ Error generating stack: `+i.message+`
           display: flex;
           justify-content: center;
           margin-bottom: 8px;
-        `,e],children:t}),Ih="のーら",Dh=["エンジニア志望の大学院生。専攻は数学。趣味として競技プログラミングやゲーム制作、Webアプリ制作などをしている。創作全般が好きで、イラストや曲なども制作している。"],Fh="images/obake.png",Ai={name:Ih,text:Dh,image:Fh},us="160px",Ah=e=>$`
+        `,e],children:t}),Ih="のーら",Dh=["エンジニア志望の大学院生。専攻は数学。趣味として競技プログラミングやゲーム制作、Webアプリ制作などをしている。創作全般が好きで、イラストや曲なども制作している。"],Fh="images/obake.jpg",Ai={name:Ih,text:Dh,image:Fh},us="160px",Ah=e=>$`
   display: flex;
   padding: 30px 100px;
   align-items: center;
