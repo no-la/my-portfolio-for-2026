@@ -124,11 +124,14 @@ Error generating stack: `+i.message+`
   background-color: ${e.colors.secondary};
 `,Wh=_`
   margin-bottom: 0;
-`,Hh=()=>U("section",{id:"profile",children:[g(si,{children:"Profile"}),U("div",{css:Uh,children:[g("div",{children:g("img",{src:Vi.image,alt:"",css:Vh})}),U("div",{children:[g(ci,{children:Vi.name}),g("div",{children:Vi.text.map((e,t)=>g("p",{css:Wh,children:e},t))}),g("div",{css:_`
+`,Hh=()=>U("section",{id:"profile",children:[g(si,{children:"Profile"}),U("div",{css:Uh,children:[g("div",{children:g("img",{src:Vi.image,alt:"",css:Vh})}),U("div",{children:[g(ci,{children:Vi.name}),g("div",{children:Vi.text.map((e,t)=>g("p",{css:Wh,children:e},t))}),U("div",{css:_`
               display: flex;
               justify-content: center;
+              gap: 24px;
               margin-top: 24px;
-            `,children:g("a",{href:"https://github.com/no-la",children:g("svg",{xmlns:"http://www.w3.org/2000/svg",viewBox:"0 0 24 24",width:"30",height:"30",children:g("path",{d:"M12.5.75C6.146.75 1 5.896 1 12.25c0 5.089 3.292 9.387 7.863 10.91.575.101.79-.244.79-.546 0-.273-.014-1.178-.014-2.142-2.889.532-3.636-.704-3.866-1.35-.13-.331-.69-1.352-1.18-1.625-.402-.216-.977-.748-.014-.762.906-.014 1.553.834 1.769 1.179 1.035 1.74 2.688 1.25 3.349.948.1-.747.402-1.25.733-1.538-2.559-.287-5.232-1.279-5.232-5.678 0-1.25.445-2.285 1.178-3.09-.115-.288-.517-1.467.115-3.048 0 0 .963-.302 3.163 1.179.92-.259 1.897-.388 2.875-.388.977 0 1.955.13 2.875.388 2.2-1.495 3.162-1.179 3.162-1.179.633 1.581.23 2.76.115 3.048.733.805 1.179 1.825 1.179 3.09 0 4.413-2.688 5.39-5.247 5.678.417.36.776 1.05.776 2.128 0 1.538-.014 2.774-.014 3.162 0 .302.216.662.79.547C20.709 21.637 24 17.324 24 12.25 24 5.896 18.854.75 12.5.75Z"})})})})]})]})]}),ss=e=>_`
+              height: 30px;
+              line-height: 30px;
+            `,children:[g("a",{href:"https://github.com/no-la",children:g("svg",{xmlns:"http://www.w3.org/2000/svg",viewBox:"0 0 24 24",width:"30",height:"30",children:g("path",{d:"M12.5.75C6.146.75 1 5.896 1 12.25c0 5.089 3.292 9.387 7.863 10.91.575.101.79-.244.79-.546 0-.273-.014-1.178-.014-2.142-2.889.532-3.636-.704-3.866-1.35-.13-.331-.69-1.352-1.18-1.625-.402-.216-.977-.748-.014-.762.906-.014 1.553.834 1.769 1.179 1.035 1.74 2.688 1.25 3.349.948.1-.747.402-1.25.733-1.538-2.559-.287-5.232-1.279-5.232-5.678 0-1.25.445-2.285 1.178-3.09-.115-.288-.517-1.467.115-3.048 0 0 .963-.302 3.163 1.179.92-.259 1.897-.388 2.875-.388.977 0 1.955.13 2.875.388 2.2-1.495 3.162-1.179 3.162-1.179.633 1.581.23 2.76.115 3.048.733.805 1.179 1.825 1.179 3.09 0 4.413-2.688 5.39-5.247 5.678.417.36.776 1.05.776 2.128 0 1.538-.014 2.774-.014 3.162 0 .302.216.662.79.547C20.709 21.637 24 17.324 24 12.25 24 5.896 18.854.75 12.5.75Z"})})}),g("a",{href:"https://atcoder.jp/users/nola",children:"AtCoder"})]})]})]})]}),ss=e=>_`
   text-align: center;
   border-bottom: 1px solid ${e.colors.background};
 `,Bh=({name:e,duration:t})=>U(ai,{children:[g("div",{css:ss,children:e}),g("div",{css:ss,children:t})]}),Qh=e=>_`
@@ -523,13 +526,13 @@ Error generating stack: `+i.message+`
               width: 16%;
               opacity: 0;
               animation: ${n?void 0:Z0}
-                1s ${Ao}s linear forwards;
+                1500ms ${Ao+.2}s linear forwards;
             `}),g("h1",{css:i=>_`
               color: ${i.colors.white};
               opacity: 0;
               font-size: 60px;
               animation: ${n?void 0:J0}
-                200ms ${Ao}s ease-out forwards;
+                500ms ${Ao}s ease-out forwards;
             `,children:"nola's portfolio"})]})})]})},t1={primary:"#56A6A7",secondary:"#5CC2D9",tertiary:"#F3A922",background:"#E4F2F2",black:"#192626",white:"#ffffff",h1:"#1a787a"},n1={colors:{...t1},fontSizes:{small:"14px",normal:"16px",medium:"18px",large:"20px"},fontWeight:{normal:"400",bold:"700"},var:{headerHeight:"50px"}},r1=e=>_`
   @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap');
   /* reset */
