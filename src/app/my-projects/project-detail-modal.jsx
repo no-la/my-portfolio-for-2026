@@ -46,7 +46,9 @@ const detailInformationWrapStyle = (theme) => css`
 
 const ProjectDetailModal = ({
   isOpen,
+  isModalAnimating,
   onClose,
+  onAnimationEnd,
   name,
   tags,
   text,
@@ -62,11 +64,13 @@ const ProjectDetailModal = ({
     <div>
       <Modal
         isActive={isOpen}
+        isModalAnimating={isModalAnimating}
         onClose={() => {
           videoRef.current.pauseVideo();
           // console.log(videoRef);
           onClose();
         }}
+        onAnimationEnd={onAnimationEnd}
         style={css`
           max-width: 90%;
           max-height: 89%;

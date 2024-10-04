@@ -1,7 +1,6 @@
 /** @jsxImportSource @emotion/react */
 
 import { css, keyframes } from '@emotion/react';
-import { useReducer } from 'react';
 
 const openTransition = keyframes`
   0% {
@@ -52,7 +51,14 @@ const modalStyle = (theme) => css`
   animation: ${openModalTransition} 200ms ease-out;
 `;
 
-const Modal = ({ onClose, isActive, style, children }) => {
+const Modal = ({
+  onClose,
+  isActive,
+  isModalAnimating,
+  onAnimationEnd,
+  style,
+  children,
+}) => {
   return (
     <div
       css={(theme) => overlayStyle(theme, isActive)}
@@ -60,12 +66,14 @@ const Modal = ({ onClose, isActive, style, children }) => {
         e.stopPropagation();
         onClose();
       }}
+      onAnimationEnd={onAnimationEnd}
     >
       <div
         css={[(theme) => modalStyle(theme), style]}
         onClick={(e) => {
           e.stopPropagation();
         }}
+        onAnimationEnd={onAnimationEnd}
       >
         {children}
       </div>
