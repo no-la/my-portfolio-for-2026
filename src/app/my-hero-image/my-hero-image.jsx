@@ -22,7 +22,7 @@ const appearObakeAnimation = keyframes`
   }
 `;
 
-const MyHeroImage = () => {
+const MyHeroImage = ({ finishLoading }) => {
   return (
     <HeroImage
       imgPath="images/hero-image.jpg"
@@ -30,6 +30,7 @@ const MyHeroImage = () => {
       wrapStyle={css`
         position: relative;
       `}
+      onLoad={finishLoading}
     >
       <div
         css={css`

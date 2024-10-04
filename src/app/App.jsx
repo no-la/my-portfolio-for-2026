@@ -13,6 +13,8 @@ import MyProjects from './my-projects/my-projects';
 import MyOthers from './my-others/my-others';
 import MyFooter from './my-footer/my-footer';
 import MyHeroImage from './my-hero-image/my-hero-image';
+import { useReducer } from 'react';
+import MyLoading from './my-loading/my-loading';
 
 const colors0 = {
   primary: '#baece2',
@@ -123,12 +125,17 @@ const globalStyles = (theme) => css`
 `;
 
 const App = () => {
+  const [isLoading, finishLoading] = useReducer(
+    () => true,
+    false,
+  );
   return (
     <>
       <ThemeProvider theme={theme}>
         <Global styles={globalStyles} />
+        {!isLoading ? <MyLoading /> : null}
         <MyHeader />
-        <MyHeroImage />
+        <MyHeroImage finishLoading={finishLoading} />
         <MyProfile />
         <MySkills />
         <MyProjects />
