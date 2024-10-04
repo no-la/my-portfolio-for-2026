@@ -1,52 +1,53 @@
 /** @jsxImportSource @emotion/react */
 
-import { css } from '@emotion/react';
+import { css, keyframes } from '@emotion/react';
+import LoadingScreen from '../../components/loading-screen/loading-screen';
 
-const wrapStyle = (theme) => css`
-  position: fixed;
-  top: 0;
-  left: 0;
-  height: 100vh;
-  width: 100vw;
-  z-index: 1000;
-  background-color: ${theme.colors.primary};
-
-  /* for not scroll background */
-  overscroll-behavior: none;
-  overflow-y: scroll;
-  ::-webkit-scrollbar {
-    display: none;
-  }
+const loadingAnimation = keyframes`
+    from {
+        transform: translate(0, 4px);
+    }
+    to {
+        transform: translate(0, 0px);
+    }
 `;
-const displayStyle = (theme) => css`
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+const loadingStyle = (theme) => css`
+  display: flex;
+  align-items: center;
+  gap: 8px;
   color: ${theme.colors.white};
   font-size: 30px;
-  text-align: center;
+`;
+const circleAnimationStyle = (theme, delay) => css`
+  animation: ${loadingAnimation} 1.2s ${delay}s infinite
+    running;
+  width: 8px;
+  height: 8px;
+  border-radius: 4px;
+  background-color: ${theme.colors.white};
 `;
 
 const MyLoading = () => {
   return (
-    <div
-      css={wrapStyle}
-      onClick={(e) => e.stopPropagation()}
-      onScroll={(e) => {
-        e.stopPropagation();
-        e.preventDefault();
-      }}
-    >
-      <h1 css={displayStyle}>Loading...</h1>
+    <LoadingScreen>
       <div
         css={css`
-          height: calc(100vh + 1px);
-          width: 1px;
-          background-color: transparent;
+          display: flex;
         `}
-      ></div>
-    </div>
+      >
+        <h1 css={loadingStyle}>
+          Loading
+          {[...Array(3)].map((_, i) => (
+            <div
+              key={i}
+              css={(theme) =>
+                circleAnimationStyle(theme, i * 0.3)
+              }
+            />
+          ))}
+        </h1>
+      </div>
+    </LoadingScreen>
   );
 };
 
