@@ -10,20 +10,28 @@ const delay = 0.5;
 const appearObakeAnimation = keyframes`
   0% {
     opacity: 0;
-    transform: translate(15px, 24px) scale(0.8);
+    transform: translate(18px, 26px) scale(0.7);
   }
   25%{
-    transform: translate(9px, 18px) scale(0.85);
+    transform: translate(6px, 20px) scale(0.77);
   }
   50%{
-    transform: translate(7px, 12px) scale(0.9);
+    transform: translate(8px, 13px) scale(0.85);
   }
   75%{
-    transform: translate(3px, 6px) scale(0.95);
+    transform: translate(3px, 6px) scale(0.92);
   }
   100% {
     opacity: 1;
     transform: translate(0px, 0px) scale(1);
+  }
+`;
+const appearTitleAnimation = keyframes`
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 `;
 const closeMyLoadingAnimation = keyframes`
@@ -103,7 +111,12 @@ const MyHeroImage = () => {
           <h1
             css={(theme) => css`
               color: ${theme.colors.white};
+              opacity: 0;
               font-size: 60px;
+              animation: ${!isLoading
+                  ? appearTitleAnimation
+                  : undefined}
+                200ms ${delay}s ease-out forwards;
             `}
           >
             nola&apos;s portfolio
