@@ -68,7 +68,7 @@ const MyHeroImage = () => {
   }, []);
   return (
     <>
-      {!isStarted < 2 && (
+      {!isStarted && (
         <div
           css={!isLoading ? myLoadingStyle : null}
           onAnimationEnd={start}
