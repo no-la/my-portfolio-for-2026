@@ -13,10 +13,10 @@ const openTransition = keyframes`
 `;
 const openModalTransition = keyframes`
    0% {
-    transform: translate(0px, -60px) scale(0.9, 0.9);
+    transform: scale(0.8);
   }
   100% {
-    transform: translate(0px, 0px) scale(1, 1);
+    transform: scale(1);
   }
 `;
 const closeTransition = keyframes`
