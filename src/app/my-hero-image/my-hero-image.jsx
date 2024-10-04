@@ -3,6 +3,8 @@ import { css, keyframes } from '@emotion/react';
 import HeroImage from '../../components/hero-image/hero-image';
 import MyLoading from './my-loading';
 import { useReducer } from 'react';
+import { useEffect } from 'react';
+import { useMemo } from 'react';
 
 const delay = 0.5;
 const appearObakeAnimation = keyframes`
@@ -40,14 +42,25 @@ const myLoadingStyle = css`
 `;
 
 const MyHeroImage = () => {
-  const [isLoading, finishLoading] = useReducer(
-    () => false,
-    true,
+  const [isLoadingCount, countFinishLoading] = useReducer(
+    (v) => v + 1,
+    0,
   );
-  const [isStarted, start] = useReducer(() => true, false);
+  const isLoading = useMemo(
+    () => isLoadingCount < 2,
+    [isLoadingCount],
+  );
+  const [isStarted, start] = useReducer(() => true, false); // 0, 1: not started, 2: started
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      countFinishLoading();
+      clearTimeout(timer);
+    }, 1000); // 最低~~ミリ秒はMyLoadingを表示
+  }, []);
   return (
     <>
-      {!isStarted && (
+      {!isStarted < 2 && (
         <div
           css={!isLoading ? myLoadingStyle : null}
           onAnimationEnd={start}
@@ -61,7 +74,7 @@ const MyHeroImage = () => {
         wrapStyle={css`
           position: relative;
         `}
-        onLoad={finishLoading}
+        onLoad={countFinishLoading}
       >
         <div
           css={css`
