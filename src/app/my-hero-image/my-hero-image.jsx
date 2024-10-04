@@ -1,7 +1,10 @@
 /** @jsxImportSource @emotion/react */
 import { css, keyframes } from '@emotion/react';
 import HeroImage from '../../components/hero-image/hero-image';
+import MyLoading from './my-loading';
+import { useReducer } from 'react';
 
+const delay = 0.5;
 const appearObakeAnimation = keyframes`
   0% {
     opacity: 0;
@@ -21,47 +24,80 @@ const appearObakeAnimation = keyframes`
     transform: translate(0px, 0px) scale(1);
   }
 `;
+const closeMyLoadingAnimation = keyframes`
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+`;
+const myLoadingStyle = css`
+  position: fixed;
+  animation: ${closeMyLoadingAnimation} ${delay}s ease-out
+    forwards;
+  z-index: 1000;
+`;
 
-const MyHeroImage = ({ finishLoading }) => {
+const MyHeroImage = () => {
+  const [isLoading, finishLoading] = useReducer(
+    () => false,
+    true,
+  );
+  const [isStarted, start] = useReducer(() => true, false);
   return (
-    <HeroImage
-      imgPath="images/hero-image.jpg"
-      id="top"
-      wrapStyle={css`
-        position: relative;
-      `}
-      onLoad={finishLoading}
-    >
-      <div
-        css={css`
-          display: flex;
-          position: absolute;
-          top: 0;
-          left: 0;
-          width: 100%;
-          height: 100%;
-          justify-content: center;
-          align-items: center;
+    <>
+      {!isStarted && (
+        <div
+          css={!isLoading ? myLoadingStyle : null}
+          onAnimationEnd={start}
+        >
+          <MyLoading />
+        </div>
+      )}
+      <HeroImage
+        imgPath="images/hero-image.jpg"
+        id="top"
+        wrapStyle={css`
+          position: relative;
         `}
+        onLoad={finishLoading}
       >
-        <img
-          src="images/obake.png"
-          alt="logo"
+        <div
           css={css`
-            width: 16%;
-            animation: ${appearObakeAnimation} 1s linear;
-          `}
-        />
-        <h1
-          css={(theme) => css`
-            color: ${theme.colors.white};
-            font-size: 60px;
+            display: flex;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            justify-content: center;
+            align-items: center;
           `}
         >
-          nola&apos;s portfolio
-        </h1>
-      </div>
-    </HeroImage>
+          <img
+            src="images/obake.png"
+            alt="logo"
+            css={css`
+              width: 16%;
+              opacity: 0;
+              animation: ${!isLoading
+                  ? appearObakeAnimation
+                  : undefined}
+                1s ${delay}s linear forwards;
+            `}
+          />
+          <h1
+            css={(theme) => css`
+              color: ${theme.colors.white};
+              font-size: 60px;
+            `}
+          >
+            nola&apos;s portfolio
+          </h1>
+        </div>
+      </HeroImage>
+    </>
   );
 };
 
