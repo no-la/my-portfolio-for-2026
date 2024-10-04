@@ -105,7 +105,7 @@ const MyHeroImage = () => {
               animation: ${!isLoading
                   ? appearObakeAnimation
                   : undefined}
-                1s ${delay}s linear forwards;
+                1500ms ${delay + 0.2}s linear forwards;
             `}
           />
           <h1
@@ -116,7 +116,7 @@ const MyHeroImage = () => {
               animation: ${!isLoading
                   ? appearTitleAnimation
                   : undefined}
-                200ms ${delay}s ease-out forwards;
+                500ms ${delay}s ease-out forwards;
             `}
           >
             nola&apos;s portfolio
