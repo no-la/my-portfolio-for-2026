@@ -47,8 +47,7 @@ const MyHeroImage = () => {
           src="images/obake.png"
           alt="logo"
           css={css`
-            width: 300px;
-            height: 300px;
+            width: 16%;
             animation: ${appearObakeAnimation} 1s linear;
           `}
         />
