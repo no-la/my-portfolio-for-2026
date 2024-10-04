@@ -508,7 +508,7 @@ Error generating stack: `+i.message+`
   animation: ${q0} ${Ao}s ease-out
     forwards;
   z-index: 1000;
-`,e1=()=>{const[e,t]=R.useReducer(i=>i+1,0),n=R.useMemo(()=>e<2,[e]),[r,l]=R.useReducer(()=>!0,!1);return R.useEffect(()=>{const i=setTimeout(()=>{t(),clearTimeout(i)},1e3)},[]),U(ai,{children:[!r<2&&g("div",{css:n?null:b0,onAnimationEnd:l,children:g(X0,{})}),g(W0,{imgPath:"images/hero-image.jpg",id:"top",wrapStyle:_`
+`,e1=()=>{const[e,t]=R.useReducer(i=>i+1,0),n=R.useMemo(()=>e<2,[e]),[r,l]=R.useReducer(()=>!0,!1);return R.useEffect(()=>{const i=setTimeout(()=>{t(),clearTimeout(i)},1e3)},[]),U(ai,{children:[!r&&g("div",{css:n?null:b0,onAnimationEnd:l,children:g(X0,{})}),g(W0,{imgPath:"images/hero-image.jpg",id:"top",wrapStyle:_`
           position: relative;
         `,onLoad:t,children:U("div",{css:_`
             display: flex;
