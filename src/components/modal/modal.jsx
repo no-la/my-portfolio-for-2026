@@ -21,48 +21,48 @@ const openModalTransition = keyframes`
 `;
 // closeTransition ...
 
+const overlayStyle = (theme, isActive) => css`
+  display: ${isActive ? 'flex' : 'none'};
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: ${`${theme.colors.black}78`};
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+
+  animation: ${openTransition} 200ms ease-out;
+  /* for not scroll background */
+  overscroll-behavior: none;
+  overflow-y: scroll;
+  ::-webkit-scrollbar {
+    display: none;
+  }
+
+  :hover {
+    cursor: pointer;
+  }
+`;
+const modalStyle = (theme) => css`
+  background-color: ${theme.colors.white};
+  cursor: default;
+  max-height: 85%;
+  animation: ${openModalTransition} 200ms ease-out;
+`;
+
 const Modal = ({ onClose, isActive, style, children }) => {
   return (
     <div
-      css={(theme) => css`
-        display: ${isActive ? 'flex' : 'none'};
-        position: fixed;
-        top: 0;
-        left: 0;
-        bottom: 0;
-        right: 0;
-        background-color: ${`${theme.colors.black}78`};
-        align-items: center;
-        justify-content: center;
-        z-index: 999;
-
-        animation: ${openTransition} 200ms ease-out;
-        /* for not scroll background */
-        overscroll-behavior: none;
-        overflow-y: scroll;
-        ::-webkit-scrollbar {
-          display: none;
-        }
-
-        :hover {
-          cursor: pointer;
-        }
-      `}
+      css={(theme) => overlayStyle(theme, isActive)}
       onClick={(e) => {
         e.stopPropagation();
         onClose();
       }}
     >
       <div
-        css={[
-          (theme) => css`
-            background-color: ${theme.colors.white};
-            cursor: default;
-            max-height: 85%;
-            animation: ${openModalTransition} 200ms ease-out;
-          `,
-          style,
-        ]}
+        css={[(theme) => modalStyle(theme), style]}
         onClick={(e) => {
           e.stopPropagation();
         }}
