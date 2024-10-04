@@ -2,6 +2,7 @@
 
 import { css, keyframes } from '@emotion/react';
 
+const transitionDuration = 150;
 const openTransition = keyframes`
   0% {
     opacity: 0;
@@ -18,10 +19,25 @@ const openModalTransition = keyframes`
     transform: translate(0px, 0px) scale(1, 1);
   }
 `;
-// closeTransition ...
+const closeTransition = keyframes`
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+`;
+const closeModalTransition = keyframes`
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0.8);
+  }
+`;
 
-const overlayStyle = (theme, isActive) => css`
-  display: ${isActive ? 'flex' : 'none'};
+const overlayStyle = (theme, isActive, isAnimating) => css`
+  display: ${isAnimating ? 'flex' : 'none'};
   position: fixed;
   top: 0;
   left: 0;
@@ -32,7 +48,12 @@ const overlayStyle = (theme, isActive) => css`
   justify-content: center;
   z-index: 999;
 
-  animation: ${openTransition} 200ms ease-out;
+  animation: ${isActive && isAnimating
+      ? openTransition
+      : closeTransition}
+    ${transitionDuration}ms ease-out;
+  animation-fill-mode: forwards;
+
   /* for not scroll background */
   overscroll-behavior: none;
   overflow-y: scroll;
@@ -44,24 +65,30 @@ const overlayStyle = (theme, isActive) => css`
     cursor: pointer;
   }
 `;
-const modalStyle = (theme) => css`
+const modalStyle = (theme, isActive, isAnimating) => css`
   background-color: ${theme.colors.white};
   cursor: default;
   max-height: 85%;
-  animation: ${openModalTransition} 200ms ease-out;
+  animation: ${isActive && isAnimating
+      ? openModalTransition
+      : closeModalTransition}
+    200ms ease-out;
+  animation-fill-mode: forwards;
 `;
 
 const Modal = ({
   onClose,
   isActive,
-  isModalAnimating,
+  isAnimating,
   onAnimationEnd,
   style,
   children,
 }) => {
   return (
     <div
-      css={(theme) => overlayStyle(theme, isActive)}
+      css={(theme) =>
+        overlayStyle(theme, isActive, isAnimating)
+      }
       onClick={(e) => {
         e.stopPropagation();
         onClose();
@@ -69,7 +96,11 @@ const Modal = ({
       onAnimationEnd={onAnimationEnd}
     >
       <div
-        css={[(theme) => modalStyle(theme), style]}
+        css={[
+          (theme) =>
+            modalStyle(theme, isActive, isAnimating),
+          style,
+        ]}
         onClick={(e) => {
           e.stopPropagation();
         }}

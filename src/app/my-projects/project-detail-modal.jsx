@@ -64,7 +64,7 @@ const ProjectDetailModal = ({
     <div>
       <Modal
         isActive={isOpen}
-        isModalAnimating={isModalAnimating}
+        isAnimating={isModalAnimating}
         onClose={() => {
           videoRef.current.pauseVideo();
           // console.log(videoRef);
