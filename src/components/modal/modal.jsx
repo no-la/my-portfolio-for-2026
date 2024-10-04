@@ -1,8 +1,9 @@
 /** @jsxImportSource @emotion/react */
 
 import { css, keyframes } from '@emotion/react';
-import { useReducer } from 'react';
+import { useMemo } from 'react';
 
+const transitionDuration = 150;
 const openTransition = keyframes`
   0% {
     opacity: 0;
@@ -13,59 +14,103 @@ const openTransition = keyframes`
 `;
 const openModalTransition = keyframes`
    0% {
-    transform: translate(0px, -60px) scale(0.9, 0.9);
+    transform: scale(0.8);
   }
   100% {
-    transform: translate(0px, 0px) scale(1, 1);
+    transform: scale(1);
   }
 `;
-// closeTransition ...
+const closeTransition = keyframes`
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+  `;
+const closeModalTransition = keyframes`
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0.8);
+  }
+  `;
+const Modal = ({
+  onClose,
+  isActive,
+  isAnimating,
+  onAnimationEnd,
+  style,
+  children,
+}) => {
+  const overlayStyle = useMemo(
+    () => (theme, isActive, isAnimating) => css`
+      display: ${isAnimating ? 'flex' : 'none'};
+      position: fixed;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      background-color: ${`${theme.colors.black}78`};
+      align-items: center;
+      justify-content: center;
+      z-index: 999;
 
-const Modal = ({ onClose, isActive, style, children }) => {
+      animation: ${isActive && isAnimating
+          ? openTransition
+          : closeTransition}
+        ${transitionDuration}ms ease-out;
+      animation-fill-mode: forwards;
+
+      /* for not scroll background */
+      overscroll-behavior: none;
+      overflow-y: scroll;
+      ::-webkit-scrollbar {
+        display: none;
+      }
+
+      :hover {
+        cursor: pointer;
+      }
+    `,
+    [isActive, isAnimating],
+  );
+  const modalStyle = useMemo(
+    () => (theme, isActive, isAnimating) => css`
+      background-color: ${theme.colors.white};
+      cursor: default;
+      max-height: 85%;
+      animation: ${isActive && isAnimating
+          ? openModalTransition
+          : closeModalTransition}
+        200ms ease-out;
+      animation-fill-mode: forwards;
+    `,
+    [isActive, isAnimating],
+  );
+
   return (
     <div
-      css={(theme) => css`
-        display: ${isActive ? 'flex' : 'none'};
-        position: fixed;
-        top: 0;
-        left: 0;
-        bottom: 0;
-        right: 0;
-        background-color: ${`${theme.colors.black}78`};
-        align-items: center;
-        justify-content: center;
-        z-index: 999;
-
-        animation: ${openTransition} 200ms ease-out;
-        /* for not scroll background */
-        overscroll-behavior: none;
-        overflow-y: scroll;
-        ::-webkit-scrollbar {
-          display: none;
-        }
-
-        :hover {
-          cursor: pointer;
-        }
-      `}
+      css={(theme) =>
+        overlayStyle(theme, isActive, isAnimating)
+      }
       onClick={(e) => {
         e.stopPropagation();
         onClose();
       }}
+      onAnimationEnd={onAnimationEnd}
     >
       <div
         css={[
-          (theme) => css`
-            background-color: ${theme.colors.white};
-            cursor: default;
-            max-height: 85%;
-            animation: ${openModalTransition} 200ms ease-out;
-          `,
+          (theme) =>
+            modalStyle(theme, isActive, isAnimating),
           style,
         ]}
         onClick={(e) => {
           e.stopPropagation();
         }}
+        onAnimationEnd={onAnimationEnd}
       >
         {children}
       </div>

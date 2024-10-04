@@ -41,6 +41,7 @@ export default [
       semi: 'error',
       quotes: ['warn', 'single', { avoidEscape: true }],
       'react/display-name': 'off',
+      'react-hooks/exhaustive-deps': 'off',
       // ---------
 
       // React

@@ -15,7 +15,7 @@ const cardStyle = (theme) => css`
   width: 360px;
 
   /* animation */
-  transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-out;
   :hover {
     cursor: pointer;
     box-shadow:
@@ -44,12 +44,22 @@ const ProjectCard = ({
   detail,
 }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isModalAnimating, setIsModalAnimating] =
+    useState(false); // modalが見えている間true
+
+  const openModal = () => {
+    setIsModalAnimating(true);
+    setIsModalOpen(true);
+  };
+  const closeModal = () => {
+    setIsModalOpen(false);
+  };
+  const handleAnimationEnd = () => {
+    if (!isModalOpen) setIsModalAnimating(false);
+  };
 
   return (
-    <Card
-      cardStyle={cardStyle}
-      onClick={() => setIsModalOpen(true)}
-    >
+    <Card cardStyle={cardStyle} onClick={openModal}>
       <img
         src={thumbnail}
         alt={`thumbnail-${name}`}
@@ -60,7 +70,9 @@ const ProjectCard = ({
       <TagList tags={tags} />
       <ProjectDetailModal
         isOpen={isModalOpen}
-        onClose={() => setIsModalOpen(false)}
+        isModalAnimating={isModalAnimating}
+        onClose={closeModal}
+        onAnimationEnd={handleAnimationEnd}
         name={name}
         tags={tags}
         {...detail}
