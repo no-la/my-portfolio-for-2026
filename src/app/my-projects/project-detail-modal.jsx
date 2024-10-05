@@ -75,7 +75,7 @@ const ProjectDetailModal = ({
           max-width: 90%;
           max-height: 89%;
           border-radius: 10px;
-          overflow-x: hidden;
+          overflow-x: auto;
           overflow-y: auto;
 
           @media (max-width: 1000px) {
