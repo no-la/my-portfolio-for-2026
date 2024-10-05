@@ -16,14 +16,14 @@ const loadingStyle = (theme) => css`
   align-items: center;
   gap: 8px;
   color: ${theme.colors.white};
-  font-size: 4vw;
+  font-size: ${theme.fontSizes.large};
 `;
 const circleAnimationStyle = (theme, delay) => css`
   animation: ${loadingAnimation} 1.2s ${delay}s infinite
     running;
-  width: 8px;
-  height: 8px;
-  border-radius: 4px;
+  width: calc(${theme.fontSizes.large} / 3);
+  height: calc(${theme.fontSizes.large} / 3);
+  border-radius: ${theme.fontSizes.large};
   background-color: ${theme.colors.white};
 `;
 
