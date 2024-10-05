@@ -38,11 +38,6 @@ const theme = {
     headerHeight: '50px',
     sectionPadding: '100px 70px',
   },
-  breakpoints: {
-    mobile: '425px',
-    tablet: '768px',
-    laptop: '1024px',
-  },
 };
 
 const globalStyles = (theme) => css`
