@@ -22,6 +22,7 @@ const HeroImage = ({
   id,
   imgStyle,
   wrapStyle,
+  onLoad,
 }) => {
   return (
     <section css={[sectionStyle, wrapStyle]} id={id}>
@@ -29,6 +30,7 @@ const HeroImage = ({
         src={imgPath}
         alt="hero-image"
         css={[heroImageStyle, imgStyle]}
+        onLoad={onLoad}
       />
       {children}
     </section>
