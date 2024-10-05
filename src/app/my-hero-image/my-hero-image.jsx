@@ -64,7 +64,7 @@ const MyHeroImage = () => {
     const timer = setTimeout(() => {
       countFinishLoading();
       clearTimeout(timer);
-    }, 1000); // 最低~~ミリ秒はMyLoadingを表示
+    }, 500); // 最低~~ミリ秒はMyLoadingを表示
   }, []);
   return (
     <>
