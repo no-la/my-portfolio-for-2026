@@ -20,14 +20,18 @@ const navStyle = css`
 `;
 const pageIconStyle = (theme) => css`
   display: flex;
+  align-items: center;
+  line-height: ${theme.fontSizes.large};
   background-color: ${theme.colors.primary};
-  line-height: ${theme.var.headerHeight};
-  font-size: ${theme.fontSizes.large};
   color: ${theme.colors.white};
   font-weight: ${theme.fontWeight.bold};
   margin-left: 12px;
   height: ${theme.var.headerHeight};
   column-gap: 2px;
+
+  @media (min-width: 600px) {
+    font-size: ${theme.fontSizes.large};
+  }
 `;
 const navButtonStyle = (theme) => css`
   /* reset */
@@ -38,6 +42,11 @@ const navButtonStyle = (theme) => css`
   color: ${theme.colors.white};
   font-weight: ${theme.fontWeight.bold};
   transition: all 0.2s ease-out;
+  font-size: ${theme.fontSizes.small};
+
+  @media (min-width: 600px) {
+    font-size: ${theme.fontSizes.normal};
+  }
 
   :visited {
     color: ${theme.colors.white};
