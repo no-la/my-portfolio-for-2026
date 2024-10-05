@@ -36,7 +36,12 @@ const theme = {
   },
   var: {
     headerHeight: '50px',
-    sectionPadding: '100px 60px',
+    sectionPadding: '100px 70px',
+  },
+  breakpoints: {
+    mobile: '425px',
+    tablet: '768px',
+    laptop: '1024px',
   },
 };
 
