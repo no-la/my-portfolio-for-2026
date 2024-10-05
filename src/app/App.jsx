@@ -75,6 +75,10 @@ const globalStyles = (theme) => css`
   h1 {
     font-size: 2em;
     color: ${theme.colors.h1};
+
+    @media (max-width: 800px) {
+      font-size: 1.2em;
+    }
   }
   h2 {
     font-size: 1.2em;
