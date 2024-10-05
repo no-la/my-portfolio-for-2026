@@ -11,7 +11,7 @@ const wrapStyle = (theme) => css`
   align-items: center;
   justify-content: center;
   padding: ${theme.var.sectionPadding};
-  gap: 30px;
+  gap: 60px;
 `;
 
 const MyProjects = () => {
