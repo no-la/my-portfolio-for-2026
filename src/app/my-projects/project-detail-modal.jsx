@@ -15,7 +15,7 @@ const contentWrapStyle = css`
   gap: ${gap};
   flex-wrap: wrap-reverse;
 
-  @media (max-width: 1000px) {
+  @media (max-width: 1200px) {
     grid-template-areas:
       'media'
       'text';
