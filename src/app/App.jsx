@@ -36,7 +36,7 @@ const theme = {
   },
   var: {
     headerHeight: '50px',
-    sectionPadding: '100px',
+    sectionPadding: '100px 70px',
   },
 };
 
@@ -75,6 +75,10 @@ const globalStyles = (theme) => css`
   h1 {
     font-size: 2em;
     color: ${theme.colors.h1};
+
+    @media (max-width: 800px) {
+      font-size: 1.2em;
+    }
   }
   h2 {
     font-size: 1.2em;

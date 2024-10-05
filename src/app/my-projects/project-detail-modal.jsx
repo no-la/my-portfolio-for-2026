@@ -15,7 +15,7 @@ const contentWrapStyle = css`
   gap: ${gap};
   flex-wrap: wrap-reverse;
 
-  @media (max-width: 1000px) {
+  @media (max-width: 1200px) {
     grid-template-areas:
       'media'
       'text';
@@ -75,7 +75,7 @@ const ProjectDetailModal = ({
           max-width: 90%;
           max-height: 89%;
           border-radius: 10px;
-          overflow-x: hidden;
+          overflow-x: auto;
           overflow-y: auto;
 
           @media (max-width: 1000px) {

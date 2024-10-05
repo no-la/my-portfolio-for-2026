@@ -64,7 +64,7 @@ const MyHeroImage = () => {
     const timer = setTimeout(() => {
       countFinishLoading();
       clearTimeout(timer);
-    }, 1000); // 最低~~ミリ秒はMyLoadingを表示
+    }, 500); // 最低~~ミリ秒はMyLoadingを表示
   }, []);
   return (
     <>
@@ -112,7 +112,7 @@ const MyHeroImage = () => {
             css={(theme) => css`
               color: ${theme.colors.white};
               opacity: 0;
-              font-size: 60px;
+              font-size: 6vw;
               animation: ${!isLoading
                   ? appearTitleAnimation
                   : undefined}

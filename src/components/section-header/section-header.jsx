@@ -15,7 +15,7 @@ const SectionHeader = ({ children }) => {
         css={(theme) => css`
           background-color: ${theme.colors.primary};
           color: ${theme.colors.white};
-          padding: 10px 0px 10px 30px;
+          padding: 10px 0px 10px 2vw;
           /* border-bottom: 4px solid ${theme.colors
             .tertiary}; */
         `}
@@ -24,7 +24,8 @@ const SectionHeader = ({ children }) => {
       </h1>
       <div
         css={(theme) => css`
-          /* background-color: ${theme.colors.tertiary}; */
+          position: relative;
+          left: -1px;
           background-image: url('images/section-header-decoration.png');
           height: inherit;
           width: 147px;
