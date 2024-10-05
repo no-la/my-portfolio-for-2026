@@ -100,7 +100,7 @@ const MyHeroImage = () => {
             src="images/obake.png"
             alt="logo"
             css={css`
-              width: 16%;
+              width: min(16%, 200px);
               opacity: 0;
               animation: ${!isLoading
                   ? appearObakeAnimation
@@ -112,7 +112,7 @@ const MyHeroImage = () => {
             css={(theme) => css`
               color: ${theme.colors.white};
               opacity: 0;
-              font-size: 6vw;
+              font-size: min(6vw, 60px);
               animation: ${!isLoading
                   ? appearTitleAnimation
                   : undefined}
