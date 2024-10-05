@@ -14,25 +14,15 @@ import MyOthers from './my-others/my-others';
 import MyFooter from './my-footer/my-footer';
 import MyHeroImage from './my-hero-image/my-hero-image';
 
-const colors0 = {
-  primary: '#baece2',
-  secondary: '#f2c5a5',
-  tertiary: '#f2c5a5',
-  background: '#fafcfa',
-  text: '#2a2a2a',
-};
-const colors1 = {
-  primary: '#56A6A7',
-  secondary: '#5CC2D9',
-  tertiary: '#F3A922',
-  background: '#E4F2F2',
-  black: '#192626',
-  white: '#ffffff',
-  h1: '#1a787a',
-};
 const theme = {
   colors: {
-    ...colors1,
+    primary: '#56A6A7',
+    secondary: '#5CC2D9',
+    tertiary: '#F3A922',
+    background: '#E4F2F2',
+    black: '#192626',
+    white: '#ffffff',
+    h1: '#1a787a',
   },
   fontSizes: {
     small: '14px',
@@ -46,6 +36,7 @@ const theme = {
   },
   var: {
     headerHeight: '50px',
+    sectionPadding: '100px',
   },
 };
 
@@ -96,7 +87,7 @@ const globalStyles = (theme) => css`
     cursor: pointer;
   }
   section {
-    margin-bottom: 80px;
+    /* margin-bottom: 60px; */
   }
   p {
     margin-bottom: ${theme.fontSizes.normal};

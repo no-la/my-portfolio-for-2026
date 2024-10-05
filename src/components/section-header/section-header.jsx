@@ -8,7 +8,6 @@ const SectionHeader = ({ children }) => {
       css={css`
         display: grid;
         grid-template-columns: 1fr auto;
-        margin-bottom: 40px;
         margin-right: 8%;
       `}
     >
