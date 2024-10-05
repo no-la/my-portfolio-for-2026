@@ -112,7 +112,7 @@ const MyHeroImage = () => {
             css={(theme) => css`
               color: ${theme.colors.white};
               opacity: 0;
-              font-size: 60px;
+              font-size: 6vw;
               animation: ${!isLoading
                   ? appearTitleAnimation
                   : undefined}

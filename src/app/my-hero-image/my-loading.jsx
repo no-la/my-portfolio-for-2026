@@ -16,7 +16,7 @@ const loadingStyle = (theme) => css`
   align-items: center;
   gap: 8px;
   color: ${theme.colors.white};
-  font-size: 30px;
+  font-size: 4vw;
 `;
 const circleAnimationStyle = (theme, delay) => css`
   animation: ${loadingAnimation} 1.2s ${delay}s infinite
