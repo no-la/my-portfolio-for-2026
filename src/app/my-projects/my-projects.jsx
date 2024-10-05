@@ -5,12 +5,12 @@ import SectionHeader from '../../components/section-header/section-header';
 import ProjectCard from './project-card';
 import datas from '../../assets/data/my-projects';
 
-const wrapStyle = css`
+const wrapStyle = (theme) => css`
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  padding: 30px 100px;
+  padding: ${theme.var.sectionPadding};
   gap: 30px;
 `;
 

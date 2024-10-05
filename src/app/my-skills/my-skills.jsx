@@ -35,6 +35,7 @@ const MySkills = () => {
         css={(theme) => css`
           display: flex;
           justify-content: center;
+          padding: ${theme.var.sectionPadding};
         `}
       >
         <div css={wrapStyle}>

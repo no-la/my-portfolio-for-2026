@@ -8,7 +8,7 @@ import datas from '../../assets/data/my-profile.json';
 const imgSize = '160px';
 const wrapStyle = (theme) => css`
   display: flex;
-  padding: 30px 100px;
+  padding: ${theme.var.sectionPadding};
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
