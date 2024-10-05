@@ -474,13 +474,13 @@ Error generating stack: `+l.message+`
   align-items: center;
   gap: 8px;
   color: ${e.colors.white};
-  font-size: 4vw;
+  font-size: ${e.fontSizes.large};
 `,Y0=(e,t)=>_`
   animation: ${G0} 1.2s ${t}s infinite
     running;
-  width: 8px;
-  height: 8px;
-  border-radius: 4px;
+  width: calc(${e.fontSizes.large} / 3);
+  height: calc(${e.fontSizes.large} / 3);
+  border-radius: ${e.fontSizes.large};
   background-color: ${e.colors.white};
 `,X0=()=>g(Q0,{children:g("div",{css:_`
           display: flex;
@@ -533,14 +533,14 @@ Error generating stack: `+l.message+`
             justify-content: center;
             align-items: center;
           `,children:[g("img",{src:"images/obake.png",alt:"logo",css:_`
-              width: 16%;
+              width: min(16%, 200px);
               opacity: 0;
               animation: ${n?void 0:Z0}
                 1500ms ${Ao+.2}s linear forwards;
             `}),g("h1",{css:l=>_`
               color: ${l.colors.white};
               opacity: 0;
-              font-size: 6vw;
+              font-size: min(6vw, 60px);
               animation: ${n?void 0:J0}
                 500ms ${Ao}s ease-out forwards;
             `,children:"nola's portfolio"})]})})]})},t1={colors:{primary:"#56A6A7",secondary:"#5CC2D9",tertiary:"#F3A922",background:"#E4F2F2",black:"#192626",white:"#ffffff",h1:"#1a787a"},fontSizes:{small:"14px",normal:"16px",medium:"18px",large:"20px"},fontWeight:{normal:"400",bold:"700"},var:{headerHeight:"50px",sectionPadding:"100px 70px"}},n1=e=>_`
