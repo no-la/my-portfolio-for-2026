@@ -24,7 +24,8 @@ const SectionHeader = ({ children }) => {
       </h1>
       <div
         css={(theme) => css`
-          /* background-color: ${theme.colors.tertiary}; */
+          position: relative;
+          left: -1px;
           background-image: url('images/section-header-decoration.png');
           height: inherit;
           width: 147px;
