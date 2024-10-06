@@ -345,7 +345,7 @@ const datas = {
       until: '2024/9/29',
       headcount: 1,
       links: [
-        'https://no-la.github.io/my-portfolio-for-2026/',
+        'https://github.com/no-la/my-portfolio-for-2026',
       ],
       images: [
         {

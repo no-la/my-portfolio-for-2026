@@ -106,9 +106,14 @@ const ProjectDetailModal = ({
             <div>
               {links.map((url, i) =>
                 typeof url == 'string' ? (
-                  <a href={url} key={i}>
-                    {url}
-                  </a>
+                  <p
+                    key={i}
+                    css={css`
+                      margin-bottom: auto;
+                    `}
+                  >
+                    <a href={url}>{url}</a>
+                  </p>
                 ) : (
                   url
                 ),
