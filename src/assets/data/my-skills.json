@@ -30,11 +30,7 @@
     },
     {
       "name": "Django",
-      "duration": "1週間"
-    },
-    {
-      "name": "Go",
-      "duration": "1日"
+      "duration": "1ヶ月"
     }
   ],
   "Tools for Development": [
@@ -52,19 +48,19 @@
     },
     {
       "name": "ESLint",
-      "duration": "数日"
+      "duration": "1ヶ月"
     },
     {
       "name": "Prettier",
-      "duration": "数日"
+      "duration": "1ヶ月"
     },
     {
       "name": "Pylint",
-      "duration": "数日"
+      "duration": "1ヶ月"
     },
     {
-      "name": "Black",
-      "duration": "数日"
+      "name": "Black(Python)",
+      "duration": "1ヶ月"
     }
   ],
   "Tools for Design": [
@@ -78,7 +74,7 @@
     },
     {
       "name": "Figma",
-      "duration": "数日"
+      "duration": "1ヶ月"
     }
   ],
   "Others": [
@@ -92,7 +88,7 @@
     },
     {
       "name": "Premiere Pro",
-      "duration": "数週間"
+      "duration": "1ヶ月"
     }
   ]
 }
