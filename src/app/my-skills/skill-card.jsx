@@ -7,7 +7,8 @@ import CardHeader from '../../components/card-header/card-header';
 
 const cardStyle = (theme) => css`
   height: auto;
-  background-color: ${theme.colors.white};
+  /* background-color: transparent; */
+  /* border: 2px solid ${theme.colors.primary}; */
   display: flex;
   row-gap: 16px;
   flex-direction: column;
@@ -17,6 +18,7 @@ const ulStyle = (theme) => css`
   display: grid;
   grid-template-columns: 1fr 100px;
   row-gap: 10px;
+  padding: 0 10px;
 `;
 
 const SkillCard = ({ header, datas }) => {

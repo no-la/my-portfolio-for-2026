@@ -7,22 +7,29 @@ import { useState } from 'react';
 import Card from '../../components/card/card';
 import CardHeader from '../../components/card-header/card-header';
 
+const interactionShadowWidth = 3;
 const cardStyle = (theme) => css`
   background-color: ${theme.colors.white};
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 360px;
+  box-shadow: 5px 5px 6px ${theme.colors.black}30;
 
   /* animation */
   transition: all 0.2s ease-out;
   :hover {
     cursor: pointer;
     box-shadow:
-      3px 3px 1px ${theme.colors.tertiary},
-      3px -3px 1px ${theme.colors.tertiary},
-      -3px 3px 1px ${theme.colors.tertiary},
-      -3px -3px 1px ${theme.colors.tertiary};
+      ${interactionShadowWidth}px
+        ${interactionShadowWidth}px 1px
+        ${theme.colors.tertiary},
+      ${interactionShadowWidth}px -${interactionShadowWidth}px
+        1px ${theme.colors.tertiary},
+      -${interactionShadowWidth}px ${interactionShadowWidth}px
+        1px ${theme.colors.tertiary},
+      -${interactionShadowWidth}px -${interactionShadowWidth}px
+        1px ${theme.colors.tertiary};
     position: relative;
     bottom: 4px;
   }
