@@ -7,23 +7,24 @@ import { useEffect } from 'react';
 import { useMemo } from 'react';
 
 const delay = 0.5;
+const obakeRotate = 12;
 const appearObakeAnimation = keyframes`
   0% {
     opacity: 0;
-    transform: translate(18px, 26px) scale(0.7);
+    transform: translate(18px, 26px) scale(0.7) rotate(${obakeRotate * 0.6}deg);
   }
   25%{
-    transform: translate(6px, 20px) scale(0.77);
+    transform: translate(6px, 20px) scale(0.77) rotate(${obakeRotate * 0.7}deg);
   }
   50%{
-    transform: translate(8px, 13px) scale(0.85);
+    transform: translate(8px, 13px) scale(0.85) rotate(${obakeRotate * 0.8}deg);
   }
   75%{
-    transform: translate(3px, 6px) scale(0.92);
+    transform: translate(3px, 6px) scale(0.92) rotate(${obakeRotate * 0.9}deg);
   }
   100% {
     opacity: 1;
-    transform: translate(0px, 0px) scale(1);
+    transform: translate(0px, 0px) scale(1) rotate(${obakeRotate}deg);
   }
 `;
 const appearTitleAnimation = keyframes`
