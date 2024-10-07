@@ -13,6 +13,7 @@ import MyProjects from './my-projects/my-projects';
 import MyOthers from './my-others/my-others';
 import MyFooter from './my-footer/my-footer';
 import MyHeroImage from './my-hero-image/my-hero-image';
+import MyConcept from './my-concept/my-concept';
 
 const theme = {
   colors: {
@@ -124,6 +125,7 @@ const App = () => {
         <Global styles={globalStyles} />
         <MyHeader />
         <MyHeroImage />
+        <MyConcept />
         <MyProfile />
         <MySkills />
         <MyProjects />
