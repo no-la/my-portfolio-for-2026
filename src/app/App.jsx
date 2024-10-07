@@ -37,7 +37,7 @@ const theme = {
   },
   var: {
     headerHeight: '50px',
-    sectionPadding: '100px 70px',
+    sectionPadding: '130px 70px',
   },
 };
 
